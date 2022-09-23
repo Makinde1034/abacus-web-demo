@@ -30,14 +30,37 @@ const Home: NextPage = () => {
       setEmailError('');
       setDisableCta(true);
 
-      try {
-        console.log('submit');
+      fetch("https://abacus-temp.herokuapp.com/get-started", {
+     
+          // Adding method type
+          method: "POST",
+     
+          // Adding body or contents to send
+          body: JSON.stringify({
+            email_address: email
+          }),
+     
+          // Adding headers to the request
+          headers: {
+              "Content-type": "application/json; charset=UTF-8"
+          }
+      })
+ 
+      // Converting to JSON
+      .then(response => {
+        if (response.ok) {
+          setEmail('');
+        }
+      })
 
-      } catch (e) {
+      // catch
+      .catch((error) => console.log({error}))
 
-      } finally {
-        setDisableCta(false)
-      }
+      // final
+      .finally(() => {
+        setDisableCta(false);
+      })
+
     } else {
       setEmailError('Enter a valid mail')
     }

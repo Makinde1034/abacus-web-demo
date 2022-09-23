@@ -124,13 +124,24 @@ a {
 
 .custom-toast {
   font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
   font-weight: 600;
-  border: 0;
   box-shadow: none !important;
+  border: 1px solid rgba(255,255,255,.25) !important;
+  padding: 1rem !important;
+  border-radius: 0.75rem !important;
+  background-color: #0E1521 !important;
+  color: '#fff';
+  font-size: .9rem;
 }
 
 @media (max-width: 600px) {
+  .custom-toast {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-color: rgba(255,255,255,.1) !important;
+  }
+
   .logo {
     width: 120px !important;
   }

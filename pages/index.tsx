@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       // Converting to JSON
       .then(response => {
         if (response.ok) {
-          toast('Thanks for signin up...')
+          toast('You have been successfully signed up.')
           setEmail('');
         }
       })
@@ -69,10 +69,6 @@ const Home: NextPage = () => {
     }
 
   }
-
-  useEffect(() => {
-    toast('Works now.')
-  })
 
   return (
     <>
@@ -138,8 +134,10 @@ const Home: NextPage = () => {
         containerId="access-succeed"
         draggable={false}
         position="bottom-center"
-        toastStyle="custom-toast"
+        toastClassName="custom-toast"
         hideProgressBar
+        theme="dark"
+        limit={1}
       />
     </>
   )

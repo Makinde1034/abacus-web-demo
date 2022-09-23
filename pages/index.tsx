@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const Home: NextPage = () => {
   const [email, setEmail] = useState('');
@@ -49,6 +51,7 @@ const Home: NextPage = () => {
       // Converting to JSON
       .then(response => {
         if (response.ok) {
+          toast('Thanks for signin up...')
           setEmail('');
         }
       })
@@ -67,65 +70,78 @@ const Home: NextPage = () => {
 
   }
 
+  useEffect(() => {
+    toast('Works now.')
+  })
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Abacus - Manage your money</title>
-        <meta name="description" content="Misson control for your money" />
-        <link rel="icon" href="/image/favicon.ico" />
-      </Head>
+    <>
+      <div className={styles.container}>
+        <Head>
+          <title>Abacus - Manage your money</title>
+          <meta name="description" content="Misson control for your money" />
+          <link rel="icon" href="/image/favicon.ico" />
+        </Head>
 
-      <div className={styles.header}>
-        <div className="flex-center-x">
-          <img
-            src="/image/logo.svg"
-            alt="Abacus Logo"
-            className="logo"
-          />
+        <div className={styles.header}>
+          <div className="flex-center-x">
+            <img
+              src="/image/logo.svg"
+              alt="Abacus Logo"
+              className="logo"
+            />
+          </div>
+
+          <div className={styles['maw-lg']}>
+            <h1 className="text-center display">
+              Misson <span className="color-blue">control</span> for <span className="color-yellow">your money</span>
+            </h1>
+            <p className="text-center text-lg color-faded" style={{ padding: '0.5rem 0' }}>
+              Abacus <span className="color-white">combine your bank, investment and crypto accounts</span> into a single, secure app so that you can <span className="color-white">analyze your finances, make transfers, buy airtime and pay your bills</span> more conveniently.
+            </p>
+          </div>
+
+
+          <div className={styles['maw-sm']}>
+            <form className="access-form" onSubmit={(e) => getAccessHandler(e)}>
+              <div className="input-group">
+                <input
+                  className={`input ${emailError?.length > 0 ? 'error' : ''}`}
+                  type="email"
+                  placeholder="Enter email"
+                  name="email"
+                  value={email}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="input-cta">
+                <button type="submit" className="button" disabled={disableCta}>
+                  {
+                    disableCta ? <img width={45} alt="logo" src="/image/loader.svg" /> : 'Get Access'
+                  }
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <div className={styles['maw-lg']}>
-          <h1 className="text-center display">
-            Misson <span className="color-blue">control</span> for <span className="color-yellow">your money</span>
-          </h1>
-          <p className="text-center text-lg color-faded" style={{ padding: '0.5rem 0' }}>
-            Abacus <span className="color-white">combine your bank, investment and crypto accounts</span> into a single, secure app so that you can <span className="color-white">analyze your finances, make transfers, buy airtime and pay your bills</span> more conveniently.
-          </p>
-        </div>
 
-
-        <div className={styles['maw-sm']}>
-          <form className="access-form" onSubmit={(e) => getAccessHandler(e)}>
-            <div className="input-group">
-              <input
-                className={`input ${emailError?.length > 0 ? 'error' : ''}`}
-                type="email"
-                placeholder="Enter email"
-                name="email"
-                value={email}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="input-cta">
-              <button type="submit" className="button" disabled={disableCta}>
-                {
-                  disableCta ? <img width={45} alt="logo" src="/image/loader.svg" /> : 'Get Access'
-                }
-              </button>
-            </div>
-          </form>
+        <div className={styles['mockup-p']}>
+          <picture className={styles.mockup}>
+              <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/getabacus/image/upload/v1663946753/web/mockup-1.png" />
+              <img alt="mockup" src="https://res.cloudinary.com/getabacus/image/upload/v1663946753/web/mockup.png" className={styles['mockup-img']} />
+          </picture>
         </div>
       </div>
-
-
-      <div className={styles['mockup-p']}>
-        <picture className={styles.mockup}>
-            <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/getabacus/image/upload/v1663946753/web/mockup-1.png" />
-            <img alt="mockup" src="https://res.cloudinary.com/getabacus/image/upload/v1663946753/web/mockup.png" className={styles['mockup-img']} />
-        </picture>
-      </div>
-    </div>
+      <ToastContainer
+        containerId="access-succeed"
+        draggable={false}
+        position="bottom-center"
+        toastStyle="custom-toast"
+        hideProgressBar
+      />
+    </>
   )
 }
 

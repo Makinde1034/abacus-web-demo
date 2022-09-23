@@ -62,10 +62,10 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles['maw-lg']}>
-          <h1 className="text-center display" style={{ lineHeight: '100%' }}>
+          <h1 className="text-center display">
             Misson <span className="color-blue">control</span> for <span className="color-yellow">your money</span>
           </h1>
-          <p className="text-center text-lg color-faded">
+          <p className="text-center text-lg color-faded" style={{ padding: '0.5rem 0' }}>
             Abacus <span className="color-white">combine your bank, investment and crypto accounts</span> into a single, secure app so that you can <span className="color-white">analyze your finances, make transfers, buy airtime and pay your bills</span> more conveniently.
           </p>
         </div>

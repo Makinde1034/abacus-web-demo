@@ -14,6 +14,10 @@
   padding-top: 1.25rem;
 }
 
+.maw-lg {
+  margin: 1rem 0;
+}
+
 .maw-sm {
   width: 600px;
 }
@@ -71,6 +75,21 @@
   .mockup-img {
     padding-top: 0rem;
     width: 125%;
+  }
+}
+
+@media (max-height: 726px) and (min-width: 600px) {
+  .maw-lg, .maw-sm {
+    padding-top: 0rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .mockup-img {
+    width: 95%;
+    padding-top: 1rem;
   }
 }
 

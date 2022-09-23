@@ -12,12 +12,16 @@ body {
   font-weight: 600;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 p {
   line-height: 160%;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -30,8 +34,9 @@ a {
 }
 
 .logo {
-  width: 180px;
+  width: 160px;
   height: auto;
+  margin-bottom: 1.5rem;
 }
 
 .flex-center {
@@ -154,6 +159,12 @@ a {
 
   .text-lg {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-height: 726px) and (min-width: 600px) {
+  p {
+    line-height: 140%;
   }
 }
 

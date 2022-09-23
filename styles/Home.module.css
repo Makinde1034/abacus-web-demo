@@ -93,6 +93,13 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .mockup-img {
+    width: 80%;
+    padding-top: 2rem;
+  }
+}
+
 
 @keyframes slideInAnimation {
   0% {

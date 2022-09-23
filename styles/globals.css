@@ -1,0 +1,167 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  background-color: #0E1521;
+  background-image: url('https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  line-height: 100%;
+}
+
+p {
+  line-height: 160%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-y {
+  display: flex;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-blue {
+  color: #226DF4;
+}
+
+.color-yellow {
+  color: #FAB613;
+}
+
+.color-faded {
+  color: #8A8D93;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.display {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.input, .button {
+  height: 56px;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background-color: #303640;
+  padding: 1rem;
+  font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.input.error {
+  border: 1px solid rgba(249, 81, 87, 1);
+}
+
+.button {
+  background-color: #226DF4;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+
+.access-form {
+  display: flex;
+  justify-content: center;
+}
+
+.access-form .input-group {
+  flex: 1;
+}
+
+.access-form .input-cta {
+  margin-left: 1rem;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 120px !important;
+  }
+
+  .display {
+    font-size: 1.85rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .input, .button {
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .access-form {
+    flex-direction: column;
+  }
+
+  .access-form .input-cta {
+    margin-left: 0rem;
+    margin-top: 0.75rem;
+    flex: 1;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .display {
+    font-size: 1.85rem;
+  }
+
+  .text-lg {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+  }
+}

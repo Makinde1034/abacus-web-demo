@@ -137,7 +137,7 @@ const Home: NextPage = () => {
               Misson <span className="color-blue">control</span> for <span className="color-yellow">your money</span>
             </h1>
             <p className="text-center text-lg color-faded" style={{ padding: '0.5rem 0' }}>
-              Abacus <span className="color-white">unify your bank, investment and crypto accounts</span> into a single, secure app so that you can <span className="color-white">analyze your finances, make transfers, buy airtime and pay your bills</span> more conveniently.
+              Abacus helps you <span className="color-white"> better track, manage and spend</span> your money by <span className="color-white">unifying your banking, investment and crypto accounts</span> into a single, secure app.
             </p>
           </div>
 

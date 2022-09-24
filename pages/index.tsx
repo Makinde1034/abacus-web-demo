@@ -72,7 +72,7 @@ const Home: NextPage = () => {
       // Converting to JSON
       .then(response => {
         if (response.ok) {
-          toast('Early Access Invitation sent to your email 🎉.')
+          toast('Early access invitation sent to your email 🎉.')
           setEmail('');
           analytics.track('Form Received', {
             email,

@@ -3,6 +3,7 @@ node_modules/
 .vscode/
 .next/
 dist/
+out/
 npm-debug.*
 *.jks
 *.p8

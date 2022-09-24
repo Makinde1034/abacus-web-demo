@@ -6,7 +6,6 @@ import styles from '../styles/Home.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.min.css';
-import { trackEvent } from '../helper/base';
 
 const Home: NextPage = () => {
   const [email, setEmail] = useState('');
@@ -32,10 +31,6 @@ const Home: NextPage = () => {
     if (isValidEmail(email)) {
       setEmailError('');
       setDisableCta(true);
-
-      trackEvent('Form Submitted', {
-        email
-      });
 
       fetch("https://abacus-temp.herokuapp.com/get-started", {
      

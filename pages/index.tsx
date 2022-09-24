@@ -125,8 +125,8 @@ const Home: NextPage = () => {
 
         <div className={styles['mockup-p']}>
           <picture className={styles.mockup}>
-              <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/getabacus/image/upload/v1663946753/web/mockup-1.png" />
-              <img alt="mockup" src="https://res.cloudinary.com/getabacus/image/upload/v1663946753/web/mockup.png" className={styles['mockup-img']} />
+              <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/getabacus/image/upload/h_600/web/mockup-1.png" />
+              <img alt="mockup" src="https://res.cloudinary.com/getabacus/image/upload/h_700/web/mockup.png" className={styles['mockup-img']} />
           </picture>
         </div>
       </div>

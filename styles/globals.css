@@ -132,7 +132,7 @@ a {
   border-radius: 0.75rem !important;
   background-color: #0E1521 !important;
   color: '#fff';
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 @media (max-width: 600px) {
@@ -140,6 +140,7 @@ a {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     border-color: rgba(255,255,255,.1) !important;
+    font-size: .9rem;
   }
 
   .logo {

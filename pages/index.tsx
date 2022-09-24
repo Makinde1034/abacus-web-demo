@@ -1,11 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
-import { ToastContainer, toast } from 'react-toastify';
 
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+
+import { v4 as uuidv4 } from 'uuid';
+
+import { AnalyticsBrowser } from '@segment/analytics-next'
+
+// default analytics id
+const DEFAULT_ANALYTICS_ID = 'Ys601cFu8aCdxoeS9sKO5qnAI55lZ4ow';
+
+// we can export this instance to share with rest of our codebase.
+export const analytics = 
+  AnalyticsBrowser.load({ writeKey: DEFAULT_ANALYTICS_ID });
 
 const Home: NextPage = () => {
   const [email, setEmail] = useState('');
@@ -25,10 +36,20 @@ const Home: NextPage = () => {
     }
   }
 
+  const handleBlur = () => {
+    analytics.track('Entered Email', {
+      email,
+    })
+  }
+
   const getAccessHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (isValidEmail(email)) {
+      analytics.track('Form Submitted', {
+        email,
+      })
+
       setEmailError('');
       setDisableCta(true);
 
@@ -51,13 +72,21 @@ const Home: NextPage = () => {
       // Converting to JSON
       .then(response => {
         if (response.ok) {
-          toast('You have been successfully signed up.')
+          toast('Early Access Invitation sent to your email 🎉.')
           setEmail('');
+          analytics.track('Form Received', {
+            email,
+          });
         }
       })
 
       // catch
-      .catch((error) => console.log({error}))
+      .catch((error) => {
+        console.log({error});
+        analytics.track('Form Error', {
+          email,
+        });
+      })
 
       // final
       .finally(() => {
@@ -69,6 +98,21 @@ const Home: NextPage = () => {
     }
 
   }
+
+  useEffect(() => {
+    // get unique key
+    const userKey = 'abacus_userId';
+    let userID = window.localStorage.getItem(userKey);
+
+    if (!userID) {
+      userID = uuidv4();
+      // store new user id
+      window.localStorage.setItem(userKey, userID || '');
+    }
+
+    analytics.identify(userID);
+
+  }, []);
 
   return (
     <>
@@ -93,7 +137,7 @@ const Home: NextPage = () => {
               Misson <span className="color-blue">control</span> for <span className="color-yellow">your money</span>
             </h1>
             <p className="text-center text-lg color-faded" style={{ padding: '0.5rem 0' }}>
-              Abacus <span className="color-white">combine your bank, investment and crypto accounts</span> into a single, secure app so that you can <span className="color-white">analyze your finances, make transfers, buy airtime and pay your bills</span> more conveniently.
+              Abacus <span className="color-white">unify your bank, investment and crypto accounts</span> into a single, secure app so that you can <span className="color-white">analyze your finances, make transfers, buy airtime and pay your bills</span> more conveniently.
             </p>
           </div>
 
@@ -108,6 +152,7 @@ const Home: NextPage = () => {
                   name="email"
                   value={email}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                 />
               </div>
 

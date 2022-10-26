@@ -1,0 +1,20 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [ "L8R8ZB2856.com.getabacus.abacus" ],
+                "components": [
+                    {
+                        "?": { "app": "false" },
+                        "exclude": true,
+                        "comment": "Excludes any URL with a query string that includes app=false from being opened as a universal link."
+                    },
+                    {
+                        "/": "*",
+                        "comment": "Matches all URLs. Any URL not excluded above should be opened as a universal link."
+                    }
+                ]
+            }
+        ]
+    }
+}

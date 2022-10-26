@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.getabacus.abacus",
+      "sha256_cert_fingerprints":
+        ["B4:08:43:75:A1:9F:5A:49:47:F3:10:A2:78:85:D1:40:61:28:30:4E:DA:8E:63:3E:1D:1C:50:61:04:51:1E:3D"]
+    }
+  }
+]

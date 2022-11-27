@@ -1,0 +1,397 @@
+[
+    {
+     "name": "Access Bank",
+     "slug": "access-bank",
+     "code": "044"
+    },
+    {
+     "name": "Access Bank PLC (Diamond)",
+     "slug": "access-bank-diamond",
+     "code": "063"
+    },
+    {
+     "name": "Ecobank Nigeria",
+     "slug": "ecobank-nigeria",
+     "code": "050"
+    },
+    {
+     "name": "Fidelity Bank",
+     "slug": "fidelity-bank",
+     "code": "070"
+    },
+    {
+     "name": "First Bank of Nigeria",
+     "slug": "first-bank-of-nigeria",
+     "code": "011"
+    },
+    {
+     "name": "First City Monument Bank",
+     "slug": "first-city-monument-bank",
+     "code": "214"
+    },
+    {
+     "name": "Guaranty Trust Bank",
+     "slug": "guaranty-trust-bank",
+     "code": "058"
+    },
+    {
+     "name": "Kuda Bank",
+     "slug": "kuda-bank",
+     "code": "50211"
+    },
+    {
+     "name": "Stanbic IBTC Bank",
+     "slug": "stanbic-ibtc-bank",
+     "code": "221"
+    },
+    {
+     "name": "Standard Chartered Bank",
+     "slug": "standard-chartered-bank",
+     "code": "068"
+    },
+    {
+     "name": "Sterling Bank",
+     "slug": "sterling-bank",
+     "code": "232"
+    },
+    {
+     "name": "United Bank for Africa",
+     "slug": "united-bank-for-africa",
+     "code": "033"
+    },
+    {
+     "name": "Union Bank of Nigeria",
+     "slug": "union-bank-of-nigeria",
+     "code": "032"
+    },
+    {
+     "name": "Zenith Bank",
+     "slug": "zenith-bank",
+     "code": "057"
+    },
+    {
+     "name": "9 Payment Service Bank",
+     "slug": "9PSB",
+     "code": "120001"
+    },
+    {
+     "name": "Abeg",
+     "slug": "abeg",
+     "code": "999999"
+    },
+    {
+     "name": "ALAT by WEMA",
+     "slug": "alat-by-wema",
+     "code": "035A"
+    },
+    {
+     "name": "Abbey Mortgage Bank",
+     "slug": "abbey-mortgage-bank",
+     "code": "801"
+    },
+    {
+     "name": "ASO Savings and Loans",
+     "slug": "asosavings",
+     "code": "401"
+    },
+    {
+        "name": "Accion Microfinance Bank",
+        "slug": "accion-mfb",
+        "code": "090134"
+    },
+    {
+        "name": "Baines Credit Microfinance Bank",
+        "slug": "baines-credit-mfb",
+        "code": "51229"
+    },
+    {
+        "name": "Bowen Microfinance Bank",
+        "slug": "bowen-mfb",
+        "code": "50931"
+    },
+    {
+     "name": "CEMCS Microfinance Bank",
+     "slug": "cemcs-microfinance-bank",
+     "code": "50823"
+    },
+    {
+        "name": "Carbon",
+        "slug": "carbon",
+        "code": "565"
+    },
+    {
+        "name": "Cellulant",
+        "slug": "cellulant",
+        "code": "100005"
+    },
+    {
+     "name": "Chipper Cash",
+     "slug": "chippercash",
+     "code": "999998"
+    },
+    {
+        "name": "Changan RTS Microfinance Bank",
+        "slug": "changan-rts-mfb",
+        "code": "50162"
+    },
+    {
+        "name": "Citi Bank",
+        "slug": "citi-bank",
+        "code": "023"
+    },
+    {
+        "name": "Contec Global",
+        "slug": "contec-global",
+        "code": "100032"
+    },
+    {
+        "name": "CoreStep MicroFinance Bank",
+        "slug": "corestep-mfb",
+        "code": "090365"
+    },
+    {
+        "name": "Coronation Merchant Bank",
+        "slug": "coronation-merchan-bank",
+        "code": "559"
+    },
+    {
+        "name": "e-BARCs Microfinance Bank",
+        "slug": "e-barcs-mfb",
+        "code": "090156"
+    },
+    {
+        "name": "Ecobank Xpress Account",
+        "slug": "ecobank-xpress-account",
+        "code": "100008"
+    },
+    {
+        "name": "Ekondo Microfinance Bank",
+        "slug": "ekondo-mfb",
+        "code": "562"
+    },
+    {
+        "name": "Eyowo",
+        "slug": "eyowo",
+        "code": "50126"
+    },
+    {
+        "name": "FFS Microfinance Bank",
+        "slug": "ffs-mfb",
+        "code": "090153"
+    },
+    {
+        "name": "FSDH Merchant Bank",
+        "slug": "fsdh-merchant-bank",
+        "code": "501"
+    },
+    {
+        "name": "Globus Bank",
+        "slug": "globus-bank",
+        "code": "00103"
+    },
+    {
+        "name": "GoMoney",
+        "slug": "gomoney",
+        "code": "100022"
+    },
+    {
+        "name": "Heritage Bank",
+        "slug": "heritage-bank",
+        "code": "030"
+    },
+    {
+     "name": "Hackman Microfinance Bank",
+     "slug": "hackman-microfinance-bank",
+     "code": "51251"
+    },
+    {
+     "name": "Hasal Microfinance Bank",
+     "slug": "hasal-microfinance-bank",
+     "code": "50383"
+    },
+    {
+     "name": "Ibile Microfinance Bank",
+     "slug": "ibile-mfb",
+     "code": "51244"
+    },
+    {
+     "name": "Infinity MFB",
+     "slug": "infinity-mfb",
+     "code": "50457"
+    },
+    {
+        "name": "JAIZ Bank",
+        "slug": "jaiz-bank",
+        "code": "301"
+    },
+    {
+        "name": "KCMB Microfinance Bank",
+        "slug": "kcmb-mfb",
+        "code": "090191"
+    },
+    {
+        "name": "Keystone Bank",
+        "slug": "keystone-bank",
+        "code": "082"
+    },
+    {
+        "name": "Kredimoney Microfinance Bank",
+        "slug": "kredimoney-mfb",
+        "code": "50200"
+    },
+    {
+     "name": "Lagos Building Investment Company Plc.",
+     "slug": "lbic-plc",
+     "code": "90052"
+    },
+    {
+     "name": "Mayfair MFB",
+     "slug": "mayfair-mfb",
+     "code": "50563"
+    },
+    {
+        "name": "Mainstreet Microfinance Bank",
+        "slug": "mainstreet-mfb",
+        "code": "090171"
+    },
+    {
+        "name": "Manny Microfinance bank",
+        "slug": "manny-mfb",
+        "code": "51313"
+    },
+    {
+        "name": "Mint-Finex Microfinance Bank",
+        "slug": "mint-finex-mfb",
+        "code": "50304"
+    },
+    {
+     "name": "One Finance",
+     "slug": "one-finance",
+     "code": "565"
+    },
+    {
+        "name": "Opay Digital Services Limited",
+        "slug": "opay",
+        "code": "100004"
+    },
+    {
+     "name": "Paycom",
+     "slug": "paycom",
+     "code": "999992"
+    },
+    {
+        "name": "Paga",
+        "slug": "paga",
+        "code": "100002"
+    },
+    {
+        "name": "PalmPay",
+        "slug": "palmpay",
+        "code": "999991"
+    },
+    {
+        "name": "Parkway - ReadyCash",
+        "slug": "parkway-ready-cash",
+        "code": "311"
+    },
+    {
+        "name": "Parallex Bank",
+        "slug": "parallex-bank",
+        "code": "526"
+    },
+    {
+        "name": "PayAttitude Online",
+        "slug": "pay-attitude-online",
+        "code": "110001"
+    },
+    {
+     "name": "Petra Mircofinance Bank Plc",
+     "slug": "petra-microfinance-bank-plc",
+     "code": "50746"
+    },
+    {
+        "name": "Polaris Bank",
+        "slug": "polaris-bank",
+        "code": "076"
+    },
+    {
+        "name": "Providus Bank",
+        "slug": "providus-bank",
+        "code": "101"
+    },
+    {
+        "name": "Rand Merchant Bank",
+        "slug": "rand-merchant-bank",
+        "code": "502"
+    },
+    {
+        "name": "Rolez Microfinance Bank",
+        "slug": "rolez-mfb",
+        "code": "090405"
+    },
+    {
+        "name": "Rubies Microfinance Bank",
+        "slug": "rubies-mfb",
+        "code": "125"
+    },
+    {
+        "name": "Safe Haven Microfinance Bank",
+        "slug": "safe-haven-mfb",
+        "code": "51113"
+    },
+    {
+        "name": "Seedvest Microfinance Bank",
+        "slug": "seedvest-mfb",
+        "code": "090369"
+    },
+    {
+        "name": "Sparkle Microfinance Bank",
+        "slug": "sparkle-mfb",
+        "code": "51310"
+    },
+    {
+        "name": "Stanbic Mobile Money",
+        "slug": "stanbic-mobile-money",
+        "code": "100007"
+    },
+    {
+        "name": "Suntrust Bank",
+        "slug": "suntrust-bank",
+        "code": "100"
+    },
+    {
+        "name": "TAJ Bank",
+        "slug": "taj-bank",
+        "code": "302"
+    },
+    {
+     "name": "TCF MFB",
+     "slug": "tcf-mfb",
+     "code": "51211"
+    },
+    {
+        "name": "Tangerine Money",
+        "slug": "tangerine-money",
+        "code": "51269"
+    },
+    {
+        "name": "Titan Trust Bank",
+        "slug": "titan-trust-bank",
+        "code": "102"
+    },
+    {
+        "name": "Unity Bank",
+        "slug": "unity-bank",
+        "code": "215"
+    },
+    {
+        "name": "VFD Microfinance Bank",
+        "slug": "vfd-mfb",
+        "code": "566"
+    },
+    {
+     "name": "Wema Bank",
+     "slug": "wema-bank",
+     "code": "035"
+    }
+ ]

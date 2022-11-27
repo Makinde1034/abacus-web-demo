@@ -1,8 +1,10 @@
 {
     "applinks": {
+        "apps": [],
         "details": [
             {
                 "appIDs": [ "L8R8ZB2856.com.getabacus.abacus" ],
+                "appID": "L8R8ZB2856.com.getabacus.abacus",
                 "components": [
                     {
                         "?": { "app": "false" },
@@ -16,5 +18,11 @@
                 ]
             }
         ]
+    },
+    "webcredentials": {
+        "apps": [ "L8R8ZB2856.com.getabacus.abacus" ]
+    },
+    "appclips": {
+        "apps": ["L8R8ZB2856.com.getabacus.abacus.Clip"]
     }
 }

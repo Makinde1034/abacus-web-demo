@@ -6,6 +6,16 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
+  background-image: url('https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.maw-xl {
+  max-width: 1028px;
+  margin: auto;
+  padding: 2rem;
+  padding-top: 2.5rem;
 }
 
 .maw-lg, .maw-sm {
@@ -13,6 +23,7 @@
   margin: auto;
   padding-top: 1.25rem;
 }
+
 
 .maw-lg {
   margin: 1rem 0;

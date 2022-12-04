@@ -6,9 +6,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background-color: #0E1521;
-  background-image: url('https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
   font-weight: 600;
 }
 
@@ -22,6 +19,7 @@ p {
   line-height: 160%;
   padding: 0;
   margin: 0;
+  font-weight: normal;
 }
 
 a {
@@ -31,6 +29,30 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mb-s {
+  margin-bottom: 0.75rem;
+}
+
+.mb-l {
+  margin-bottom: 1.5rem;
+}
+
+.mt-l {
+  margin-top: 1.5rem;
+}
+
+.pb-l {
+  padding-bottom: 1.5rem;
+}
+
+.pt-l {
+  padding-top: 1.5rem;
 }
 
 .logo {
@@ -52,7 +74,7 @@ a {
 
 .flex-center-y {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .text-center {

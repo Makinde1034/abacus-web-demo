@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import Head from 'next/head';
+import Script from 'next/script';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
@@ -122,6 +123,8 @@ const Home: NextPage = () => {
           <meta name="description" content="Misson control for your money" />
           <link rel="icon" href="/image/favicon.ico" />
         </Head>
+
+        <Script type="text/javascript" src="/js/live-chat.js" />
 
         <div className={styles.header}>
           <div className="flex-center-x">

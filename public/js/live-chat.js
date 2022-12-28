@@ -4,9 +4,7 @@ function livechatHandler() {
 
   var liveChatParams = urlParams.get('livechat') === 'true';
 
-  if (liveChatParams) {
-    Tawk_API.toggle();
-  }
+  Tawk_API.toggle();
 }
 
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -20,5 +18,5 @@ s0.parentNode.insertBefore(s1,s0);
 
 setTimeout(() => {
   livechatHandler();
-}, 1000)
+}, 3000)
 })();

@@ -131,6 +131,10 @@ a {
   padding: 1rem 1.5rem;
 }
 
+.subtle-button {
+  background-color: #2853a3;
+}
+
 .access-form {
   display: flex;
   justify-content: center;

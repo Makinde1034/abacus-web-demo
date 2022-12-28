@@ -12,7 +12,7 @@ const Livechat: NextPage = () => {
     {
       name: 'Chat with a human',
       onClick: () => {
-        window?.Tawk_API?.toggle?.();
+        (window as any)?.Tawk_API?.toggle?.();
       }
     },
     {
@@ -65,7 +65,7 @@ const Livechat: NextPage = () => {
             {
               infoList.map((item, index) => {
                 return (
-                  <button className="button mb-l" key={index} onClick={item.onClick}>
+                  <button className="button subtle-button mb-l" key={index} onClick={item.onClick}>
                     { item.name }
                   </button>
                 )

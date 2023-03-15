@@ -21,4 +21,11 @@ body {
   --grey: #b6b6b6;
   --white: white;
   --primary:#226DF4;
+  --greyWhite:#757575;
+  
+}
+
+.flex-center-x {
+  display: flex;
+  align-items: center;
 }

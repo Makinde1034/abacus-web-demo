@@ -11,21 +11,37 @@ body {
   font-family: "Cabinet Grotesk", -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
-  /* color: white; */
-  /* background-color: #0E1521; */
+
   font-weight: 600;
+  background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
 }
 
 :root {
-  --dark: #141414;
-  --grey: #b6b6b6;
+  --dark: #0E1521;
+  --grey: #e0e0e0;
   --white: white;
-  --primary:#226DF4;
-  --greyWhite:#757575;
-  
+  --primary: #226df4;
+  --greyWhite: #757575;
+  --brownGrey: #9f9f9f;
+  --darkBlue: #0e1521;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-center-x {
   display: flex;
+  justify-content: center;
+}
+
+.flex-center-y {
+  display: flex;
   align-items: center;
+}
+
+.text-center {
+  text-align: center;
 }

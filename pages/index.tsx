@@ -1,18 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import Head from "next/head";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState, useRef } from "react";
 import styles from "../styles/Home.module.css";
-
+import { TwitterReviews as tweets } from "../contants/Copies";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import { v4 as uuidv4 } from "uuid";
 
 import { AnalyticsBrowser } from "@segment/analytics-next";
-import { DiscoverCopies, WalletInfoCopies } from "../helpers";
+import { DiscoverCopies, WalletInfoCopies } from "../contants/Copies";
 import { Faq } from "../components/Faq";
-
+import { ImagesPath, SocialMediaIcons } from "../contants/ImgPath";
+import { motion } from "framer-motion";
+import { TweetCard } from "../components/TweetCard";
 // default analytics id
 const DEFAULT_ANALYTICS_ID = "Ys601cFu8aCdxoeS9sKO5qnAI55lZ4ow";
 
@@ -25,6 +27,10 @@ const Home: NextPage = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [disableCta, setDisableCta] = useState(false);
+  const featureRef = useRef(null);
+  const reviewsRef = useRef(null);
+  const faqRef = useRef(null);
+  const securityRef = useRef(null);
 
   const isValidEmail = (email: string) => {
     return /\S+@\S+\.\S+/.test(email);
@@ -112,60 +118,12 @@ const Home: NextPage = () => {
     analytics.identify(userID);
   }, []);
 
-  const tweets = [
-    {
-      name: "Kendrick Rh...",
-      tweet: "Lorem  do eiusmod tempor incididunt utlabore et dolore ",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet: "Lorem ipsum dolor sit amet consectetur adipscising elit.",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet:
-        "Lorem ipsum dolor sit amet consectetur adipscising elit, sed do eiusmod tempor.",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet:
-        "Lorem ipsum dolor sit amet consectetur adipscising elit, sed do eiusmod tempor incididunt ut .",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet:
-        "Lorem ipsum dolor sit amet consectetur adipscising elit, sed do eiusmod tempor .",
-    },
-  ];
-
-  const tweets2 = [
-    {
-      name: "bryhs uiuty.",
-      tweet:
-        "Lorem  do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet: "Lorem ipsum dolor sit amet consectetur adipscising elit.",
-    },
-    {
-      name: "John",
-      tweet:
-        "Lorem iincididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam, quis",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet:
-        "Lorem ipsum dolor sit amet consectetur adipscising elit, sed do eiusmod tempor incididunt ut .",
-    },
-    {
-      name: "Kendrick Rh...",
-      tweet: "Lorem ipsum dolor sit amet consectetur adipscising elit, sed do",
-    },
-  ];
+  const scrollToSection = (ref: any) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         <Head>
           <title>Abacus - Manage your money</title>
@@ -175,18 +133,20 @@ const Home: NextPage = () => {
         <nav className={styles.nav}>
           <div className={styles.nav__logo}>
             <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
-            <p>abacus</p>
           </div>
           <ul>
-            <li>Features</li>
-            <li>Scurity</li>
-            <li>Reviews</li>
-            <li>FAQS</li>
+            <li onClick={() => scrollToSection(featureRef)}>Features</li>
+            <li>Security</li>
+            <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
+            <li onClick={() => scrollToSection(reviewsRef)}>FAQS</li>
           </ul>
+          <div className={styles.nav__menu}>
+            <img src={ImagesPath.menuIcon} alt="" />
+          </div>
         </nav>
         <section className={styles.hero}>
           <h1>
-            Mission <span>control </span>for <br /> your money
+            Mission <span>control </span>for your money
           </h1>
           <p>
             Abacus helps you better track, manage and spend your money by
@@ -198,7 +158,7 @@ const Home: NextPage = () => {
               <span>App Store</span>
               <img
                 height={30}
-                src="https://res.cloudinary.com/dlinffsds/image/upload/v1678826278/apple-icon_vsksjl.svg"
+                src={ImagesPath.appStoreLogo}
                 alt="App store icon"
               />
             </button>
@@ -206,56 +166,64 @@ const Home: NextPage = () => {
               <span>Google Play</span>
               <img
                 height={30}
-                src="https://res.cloudinary.com/dlinffsds/image/upload/v1678828252/google_play_vtcizu.svg"
+                src={ImagesPath.playStoreLogo}
                 alt="Play store icon"
               />
             </button>
           </div>
 
           <div className={styles.hero__mockup}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678823009/Mask_group_xql0xd.svg"
-              alt="hero-mockup"
-            />
+            <img src={ImagesPath.heroImage} alt="hero-mockup" />
           </div>
           {/* absolute elements */}
           <div className={styles.hero__roadmap_r}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678823317/map-line-right_od2rbc.svg"
-              alt=""
-            />
+            <img src={ImagesPath.rightRoadMapLine} alt="road map image" />
           </div>
           <div className={styles.hero__roadmap_l}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678824945/map-line-left_m3wesj.svg"
-              alt=""
-            />
+            <img src={ImagesPath.leftRoadMapLine} alt="road map image" />
           </div>
-          <div className={styles.carbon}>
+          <motion.div
+            initial={{ x: "100px" }}
+            animate={{ x: "0px" }}
+            transition={{ duration: 0.5 }}
+            className={styles.carbon}
+          >
             <img
               className={styles.float__icons}
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825127/carbon-icon_hdplxf.svg"
+              src={ImagesPath.carbonIcon}
               alt="carbon-icon"
             />
-          </div>
+          </motion.div>
           <div className={styles.arrows__r}>
             <img
               src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
               alt="arrow"
             />
           </div>
-          <div className={styles.kuda}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825544/kuda_i2nzjt.svg"
-              alt="kuda-icon"
-            />
-          </div>
-          <div className={styles.abeg}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825943/abeg-icon_o28wdp.svg"
-              alt=""
-            />
-          </div>
+          <motion.div
+            initial={{ x: "100px" }}
+            animate={{ x: "0px" }}
+            transition={{ duration: 0.5 }}
+            className={styles.fcmb}
+          >
+            <img src={ImagesPath.fcmbIcon} alt="arrow" />
+          </motion.div>
+          <motion.div
+            initial={{ x: "-100px" }}
+            animate={{ x: "0px" }}
+            transition={{ duration: 0.5 }}
+            className={styles.kuda}
+          >
+            <img src={ImagesPath.kudaIcon} alt="kuda-icon" />
+          </motion.div>
+          <motion.div
+            initial={{ x: "-100px" }}
+            animate={{ x: "0px" }}
+            transition={{ duration: 0.5 }}
+            className={styles.abeg}
+          >
+            <img src={ImagesPath.abegIcon} alt="" />
+          </motion.div>
           <div className={styles.arrows__l}>
             <img
               src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
@@ -268,16 +236,13 @@ const Home: NextPage = () => {
             {[...Array(20)].map((item, key) => (
               <div key={key}>
                 <p>ONE APP ALL YOUR ACCOUNTS</p>
-                <img
-                  src="https://res.cloudinary.com/dlinffsds/image/upload/v1678861483/Star_1_geekvj.svg"
-                  alt=""
-                />
+                <img src={ImagesPath.startIcon} alt="" />
               </div>
             ))}
           </div>
         </section>
         <section>
-          <div className={styles.discover}>
+          <div ref={featureRef} className={styles.discover}>
             <div className={styles.discover__l}>
               <h3>
                 Discover the key features <br /> of Abacus mobile app
@@ -327,14 +292,13 @@ const Home: NextPage = () => {
               ))}
             </div>
           </div>
-          <div className={styles.wallet__r}></div>
+          <div className={styles.wallet__r}>
+            <img src={ImagesPath.walletMockup} alt="" />
+          </div>
         </section>
         <section className={styles.pocket}>
           <div className={styles.pocket__l}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678866557/Group_2079_fzzkh2.svg"
-              alt=""
-            />
+            <img src={ImagesPath.pocketMockup} alt="" />
           </div>
           <div className={styles.pocket__r}>
             <h3>
@@ -348,65 +312,33 @@ const Home: NextPage = () => {
             </p>
           </div>
         </section>
-        <section className={styles.reviews}>
+        <section ref={reviewsRef} className={styles.reviews}>
           <h3>
             The reviews speak <br /> for themselves
           </h3>
           <div className={styles.reviews__marquee}>
             <div className={styles.reviews__container}>
               {tweets.map((item, index) => (
-                <div className={styles.box}>
-                  <div className={styles.box__header}>
-                    <div className={styles.box__image}>
-                      <img
-                        src="https://res.cloudinary.com/dlinffsds/image/upload/v1678872304/Ellipse_249_inhkol.svg"
-                        alt=""
-                      />
-                    </div>
-                    <h3>{item.name}</h3>
-                  </div>
-                  <p>{item.tweet}</p>
-                </div>
+                <TweetCard {...item} />
               ))}
               {tweets.slice(0, 4).map((item, index) => (
-                <div className={styles.box}>
-                  <div className={styles.box__header}>
-                    <div className={styles.box__image}></div>
-                    <h3>{item.name}</h3>
-                  </div>
-                  <p>{item.tweet}</p>
-                </div>
+                <TweetCard {...item} />
               ))}
             </div>
-            <div className={styles.reviews__container}>
-              {tweets2.map((item, index) => (
-                <div className={styles.box}>
-                  <div className={styles.box__header}>
-                    <div className={styles.box__image}></div>
-                    <h3>{item.name}</h3>
-                  </div>
-                  <p>{item.tweet}</p>
-                </div>
+            <div className={styles.reviews__container2}>
+              {tweets.reverse().map((item, index) => (
+                <TweetCard {...item} />
               ))}
-              {tweets2.slice(0, 4).map((item, index) => (
-                <div className={styles.box}>
-                  <div className={styles.box__header}>
-                    <div className={styles.box__image}></div>
-                    <h3>{item.name}</h3>
-                  </div>
-                  <p>{item.tweet}</p>
-                </div>
+              {tweets.slice(0, 4).map((item, index) => (
+                <TweetCard {...item} />
               ))}
             </div>
           </div>
         </section>
-        <section className={styles.faq}>
+        <section ref={faqRef} className={styles.faq}>
           <div className={styles.faq__box}>
             <div className={styles.faq__box__l}>
-              <img
-                src="https://res.cloudinary.com/dlinffsds/image/upload/v1678873935/Frame_325_ulnvij.svg"
-                alt=""
-              />
+              <img src={ImagesPath.faqImage} alt="" />
             </div>
             <div className={styles.faq__box__r}>
               <Faq />
@@ -425,7 +357,7 @@ const Home: NextPage = () => {
                 <span>App Store</span>
                 <img
                   height={30}
-                  src="https://res.cloudinary.com/dlinffsds/image/upload/v1678826278/apple-icon_vsksjl.svg"
+                  src={ImagesPath.appStoreLogo}
                   alt="App store icon"
                 />
               </button>
@@ -433,18 +365,57 @@ const Home: NextPage = () => {
                 <span>Google Play</span>
                 <img
                   height={30}
-                  src="https://res.cloudinary.com/dlinffsds/image/upload/v1678828252/google_play_vtcizu.svg"
+                  src={ImagesPath.playStoreLogo}
                   alt="Play store icon"
                 />
               </button>
             </div>
             <div className={styles.accounts__mockup}>
-              <img src="https://res.cloudinary.com/getabacus/image/upload/h_900/web/mockup.png" alt="" />
+              <img src={ImagesPath.accountsMockup} alt="" />
             </div>
           </div>
         </section>
+        <footer className={styles.footer}>
+          <div className={styles.footer__about}>
+            <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
+            <p>
+              Abacus is an app that provides an all-in-one solution for managing
+              and monitoring your financial apps and crypto accounts.
+            </p>
+            <a href="">support@abacus.com</a>
+          </div>
+          <div className={styles.footer__learn}>
+            <ul>
+              <li>Learn More</li>
+              <li>Features</li>
+              <li>Security</li>
+              <li>Reviews</li>
+              <li>FAQs</li>
+            </ul>
+          </div>
+          <div className={styles.footer__media}>
+            <p>Stay in Touch</p>
+            <div>
+              <a href="">
+                <img src={SocialMediaIcons.instagram} alt="" />
+              </a>
+              <a href="">
+                <img src={SocialMediaIcons.twitter} alt="" />
+              </a>
+              <a href="">
+                <img src={SocialMediaIcons.facebook} alt="" />
+              </a>
+              <a href="">
+                <img src={SocialMediaIcons.telegram} alt="" />
+              </a>
+              <a href="">
+                <img src={SocialMediaIcons.linkedInIcon} alt="" />
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
-      {/* <ToastContainer
+      <ToastContainer
         containerId="access-succeed"
         draggable={false}
         position="bottom-center"
@@ -452,8 +423,8 @@ const Home: NextPage = () => {
         hideProgressBar
         theme="dark"
         limit={1}
-      /> */}
-    </>
+      />
+    </div>
   );
 };
 

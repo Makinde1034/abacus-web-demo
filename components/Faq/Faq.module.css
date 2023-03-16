@@ -1,12 +1,11 @@
-.faq{
-    width: 100%;
+.faq {
+  width: 100%;
 }
 
 .faq__header {
   font-weight: 800;
   font-size: 2rem;
   margin-bottom: 20px;
-  
 }
 
 .faq__wrap {
@@ -35,8 +34,18 @@
   align-items: center;
 }
 
+.icon img {
+  height: 10px;
+}
+
 .faq__description p {
   color: var(--greyWhite);
   font-weight: lighter;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq__header {
+    font-size: 1.5rem;
+  }
 }

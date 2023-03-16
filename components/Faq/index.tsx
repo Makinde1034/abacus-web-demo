@@ -1,14 +1,19 @@
 import styles from "./Faq.module.css";
-import { FaqInfo } from "../../helpers";
+import { FaqInfo } from "../../contants/Copies";
 import { useState } from "react";
+import { ImagesPath } from "../../contants/ImgPath";
+import barIcon from "../../assets/images/dash.svg";
+import arrowDownIcon from "../../assets/images/arrow-down.svg";
 
 export const Faq = () => {
   const [showDescription, setShowDescription] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleShowDescription = (index: number) => {
-    if (activeIndex === index) {
-      setShowDescription(false);
+    if (activeIndex !== index) {
+      setShowDescription(true);
+      setActiveIndex(index);
+      return
     }
     setShowDescription(!showDescription);
     setActiveIndex(index);
@@ -33,7 +38,16 @@ export const Faq = () => {
             >
               <h3>{item.title}</h3>
               <div className={styles.icon}>
-                {isActiveIndex && showDescription ? "-" : "+"}
+                {
+                  <img
+                    src={
+                      isActiveIndex && showDescription
+                        ? ImagesPath.dashIcon
+                        : ImagesPath.arrowDownIcon
+                    }
+                    alt=""
+                  />
+                }
               </div>
             </div>
             {showDescription && isActiveIndex ? (

@@ -21,6 +21,7 @@ import { ImagesPath, SocialMediaIcons } from "../contants/ImgPath";
 import { motion } from "framer-motion";
 import { TweetCard } from "../components/TweetCard";
 import { StoreButtons } from "../components/StoreButtons";
+import Link from "next/link";
 
 // default analytics id
 const DEFAULT_ANALYTICS_ID = "Ys601cFu8aCdxoeS9sKO5qnAI55lZ4ow";
@@ -265,7 +266,7 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.discover__grid}>
             {DiscoverCopies.map((item, index) => (
-              <div className={styles.discover__grid__box}>
+              <div key={index} className={styles.discover__grid__box}>
                 <img src={item.imageUrl} alt="mockups" />
                 <h3>{item.title}</h3>
                 <p>{item.descriptio}</p>
@@ -337,18 +338,18 @@ const Home: NextPage = () => {
           <div className={styles.reviews__marquee}>
             <div className={styles.reviews__container}>
               {tweets.map((item, index) => (
-                <TweetCard {...item} />
+                <TweetCard key={index} {...item} />
               ))}
               {tweets.slice(0, 4).map((item, index) => (
-                <TweetCard {...item} />
+                <TweetCard key={index}  {...item} />
               ))}
             </div>
             <div className={styles.reviews__container2}>
               {MoreTwitterReviews.map((item, index) => (
-                <TweetCard {...item} />
+                <TweetCard key={index}  {...item} />
               ))}
               {MoreTwitterReviews.slice(0, 4).map((item, index) => (
-                <TweetCard {...item} />
+                <TweetCard key={index}  {...item} />
               ))}
             </div>
           </div>
@@ -388,7 +389,7 @@ const Home: NextPage = () => {
                 Abacus is an app that provides an all-in-one solution for
                 managing and monitoring your financial apps and crypto accounts.
               </p>
-              <a href="/chat">support@abacus.com</a>
+              <Link href="/chat">support@abacus.com</Link>
             </div>
             <div className={styles.footer__learn}>
               <ul>

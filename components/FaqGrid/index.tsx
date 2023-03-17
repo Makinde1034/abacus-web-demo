@@ -13,7 +13,7 @@ export const FaqGrid = () => {
       </div>
       <div className={styles.faq__info}>
         {FaqInfo.map((item, index) => (
-          <div className={styles.faq__box}>
+          <div key={index} className={styles.faq__box}>
             <h3>{item.question}</h3>
             <p>{item.answer}</p>
           </div>

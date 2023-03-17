@@ -24,13 +24,13 @@ export const Faq = () => {
       <div>
         <h3 className={styles.faq__header}>FAQs</h3>
         <p className={styles.faq__description}>
-          Have some questions? We've probably already answered
+          Have some questions? We have probably already answered
         </p>
       </div>
       {FaqInfo.map((item, index) => {
         const isActiveIndex = index === activeIndex;
         return (
-          <div className={styles.faq__wrap}>
+          <div key={index} className={styles.faq__wrap}>
             <div
               onClick={() => handleShowDescription(index)}
               className={styles.faq__question}

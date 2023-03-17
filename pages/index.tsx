@@ -342,7 +342,9 @@ const Home: NextPage = () => {
         </section>
         <section ref={reviewsRef} className="section__white">
           <div className={styles.reviews}>
-            <h3>The reviews speak for themselves</h3>
+            <h3 className={styles.reviews__header}>
+              The reviews speak for themselves
+            </h3>
             <div className={styles.reviews__marquee}>
               <div className={styles.reviews__container}>
                 {tweets.map((item, index) => (

@@ -426,10 +426,12 @@
 }
 
 .reviews {
-  padding-top: 50px;
+  padding: 50px 20px 0px 20px;
   background-color: white;
   max-width: 1600px;
 }
+
+
 .reviews__marquee {
   overflow: hidden;
   padding: 50px 0px 50px 0px;
@@ -891,8 +893,11 @@
     width: 80%;
   }
 
+
+
   .reviews h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    
   }
 
   .reviews__marquee {

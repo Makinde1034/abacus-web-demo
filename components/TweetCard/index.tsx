@@ -19,7 +19,7 @@ export const TweetCard = (props: {
           <img src={imageUrl} alt="user image" />
         </div>
         <div className={styles.user__details}>
-          <h3>{name}</h3>
+          <h3 style={{ fontSize: "1rem" }}>{name}</h3>
           <p>{userName}</p>
         </div>
       </div>

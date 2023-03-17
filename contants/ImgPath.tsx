@@ -35,6 +35,10 @@ export const ImagesPath = {
     "https://res.cloudinary.com/getabacus/image/upload/v1678973385/app/web/twitter-icon_2_tu5rls.svg",
   walletMockup:
     "https://res.cloudinary.com/getabacus/image/upload/v1678984412/app/web/wallet-mockup_xzznue.svg",
+  securityImage:
+    "https://res.cloudinary.com/getabacus/image/upload/v1678991995/app/web/cyborg-key-3_1_vapdxs.svg",
+  closeIcon:
+    "https://res.cloudinary.com/getabacus/image/upload/v1679030683/app/web/Vector_hnbrxw.svg",
 };
 
 export const SocialMediaIcons = {

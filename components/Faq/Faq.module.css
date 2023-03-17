@@ -8,6 +8,10 @@
   margin-bottom: 20px;
 }
 
+.faq__wrap:nth-last-child(1) {
+  border-bottom: none;
+}
+
 .faq__wrap {
   border-bottom: 1px solid #cdcdcd;
   padding: 20px 0px 20px 0px;
@@ -22,6 +26,7 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  user-select: none;
 }
 
 .icon {

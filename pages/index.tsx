@@ -3,11 +3,15 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { ChangeEvent, FormEvent, useEffect, useState, useRef } from "react";
 import styles from "../styles/Home.module.css";
-import { TwitterReviews as tweets } from "../contants/Copies";
+import {
+  TwitterReviews as tweets,
+  MoreTwitterReviews,
+} from "../contants/Copies";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-
+import { AppDetails } from "../contants/App";
 import { v4 as uuidv4 } from "uuid";
+import { MobileNav } from "../components/MobileNavigation";
 
 import { AnalyticsBrowser } from "@segment/analytics-next";
 import { DiscoverCopies, WalletInfoCopies } from "../contants/Copies";
@@ -15,6 +19,8 @@ import { Faq } from "../components/Faq";
 import { ImagesPath, SocialMediaIcons } from "../contants/ImgPath";
 import { motion } from "framer-motion";
 import { TweetCard } from "../components/TweetCard";
+import { StoreButtons } from "../components/StoreButtons";
+
 // default analytics id
 const DEFAULT_ANALYTICS_ID = "Ys601cFu8aCdxoeS9sKO5qnAI55lZ4ow";
 
@@ -27,6 +33,7 @@ const Home: NextPage = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [disableCta, setDisableCta] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
   const featureRef = useRef(null);
   const reviewsRef = useRef(null);
   const faqRef = useRef(null);
@@ -127,7 +134,17 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <Head>
           <title>Abacus - Manage your money</title>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Misson control for your money" />
+          <meta name="keywords" content="Misson control for your money" />
+          <meta property="og:title" content="Misson control for your money" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.trustabacus.com/" />
+          <meta
+            property="og:description"
+            content="Misson control for your money."
+          />
           <link rel="icon" href="/image/favicon.ico" />
         </Head>
         <nav className={styles.nav}>
@@ -136,12 +153,15 @@ const Home: NextPage = () => {
           </div>
           <ul>
             <li onClick={() => scrollToSection(featureRef)}>Features</li>
-            <li>Security</li>
+            <li onClick={() => scrollToSection(securityRef)}>Security</li>
             <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
-            <li onClick={() => scrollToSection(reviewsRef)}>FAQS</li>
+            <li onClick={() => scrollToSection(faqRef)}>FAQS</li>
           </ul>
-          <div className={styles.nav__menu}>
-            <img src={ImagesPath.menuIcon} alt="" />
+          <div
+            onClick={() => setShowMobileNav(!showMobileNav)}
+            className={styles.nav__menu}
+          >
+            <img src={ImagesPath.menuIcon} alt="menu icon" />
           </div>
         </nav>
         <section className={styles.hero}>
@@ -153,24 +173,7 @@ const Home: NextPage = () => {
             unifying your banking, investment and crypto accounts into a single,
             secure app.
           </p>
-          <div className={styles.hero__buttons}>
-            <button>
-              <span>App Store</span>
-              <img
-                height={30}
-                src={ImagesPath.appStoreLogo}
-                alt="App store icon"
-              />
-            </button>
-            <button>
-              <span>Google Play</span>
-              <img
-                height={30}
-                src={ImagesPath.playStoreLogo}
-                alt="Play store icon"
-              />
-            </button>
-          </div>
+          <StoreButtons />
 
           <div className={styles.hero__mockup}>
             <img src={ImagesPath.heroImage} alt="hero-mockup" />
@@ -222,7 +225,7 @@ const Home: NextPage = () => {
             transition={{ duration: 0.5 }}
             className={styles.abeg}
           >
-            <img src={ImagesPath.abegIcon} alt="" />
+            <img src={ImagesPath.abegIcon} alt="abeg icon" />
           </motion.div>
           <div className={styles.arrows__l}>
             <img
@@ -270,7 +273,7 @@ const Home: NextPage = () => {
         <section className={styles.wallet}>
           <div className={styles.wallet__l}>
             <h3>
-              Enhanced budgeting via <span>wallet</span>
+              Budget better with <span>wallet</span>
             </h3>
             <p className={styles.wallet__l__para}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -281,9 +284,9 @@ const Home: NextPage = () => {
             <div className={styles.wallet__l__grid}>
               {WalletInfoCopies.map((item, index) => (
                 <div className={styles.wallet__grid__box} key={index}>
-                  <div style={{ marginRight: "10px" }}>
-                    <img height={30} src={item.imageUrl} alt="" />
-                  </div>
+                  {/* <div style={{ marginRight: "10px" }}>
+                    <img height={30} src={item.imageUrl} alt="wallet" />
+                  </div> */}
                   <div>
                     <p>{item.title}</p>
                     <p>{item.description}</p>
@@ -293,29 +296,41 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className={styles.wallet__r}>
-            <img src={ImagesPath.walletMockup} alt="" />
+            <img src={ImagesPath.walletMockup} alt="wallet mockup" />
           </div>
         </section>
         <section className={styles.pocket}>
           <div className={styles.pocket__l}>
-            <img src={ImagesPath.pocketMockup} alt="" />
+            <img src={ImagesPath.pocketMockup} alt="pocket mockup" />
           </div>
           <div className={styles.pocket__r}>
             <h3>
-              Pay with <span>pockets</span> or{" "}
+              Pay with <span>pockets</span> or directly{" "}
             </h3>
-            <h3>directly from your </h3>
-            <h3> bank accounts</h3>
+            <h3> from your bank accounts</h3>
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </section>
+        <section ref={securityRef} className={styles.security}>
+          <div className={styles.security__l}>
+            <h3>We keep your funds safe</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex commodo.
+            </p>
+          </div>
+          <div className={styles.security__r}>
+            <img src={ImagesPath.securityImage} alt="" />
+          </div>
+        </section>
         <section ref={reviewsRef} className={styles.reviews}>
-          <h3>
-            The reviews speak <br /> for themselves
-          </h3>
+          <h3>The reviews speak for themselves</h3>
           <div className={styles.reviews__marquee}>
             <div className={styles.reviews__container}>
               {tweets.map((item, index) => (
@@ -326,10 +341,10 @@ const Home: NextPage = () => {
               ))}
             </div>
             <div className={styles.reviews__container2}>
-              {tweets.reverse().map((item, index) => (
+              {MoreTwitterReviews.map((item, index) => (
                 <TweetCard {...item} />
               ))}
-              {tweets.slice(0, 4).map((item, index) => (
+              {MoreTwitterReviews.slice(0, 4).map((item, index) => (
                 <TweetCard {...item} />
               ))}
             </div>
@@ -352,66 +367,54 @@ const Home: NextPage = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div className={styles.hero__buttons}>
-              <button>
-                <span>App Store</span>
-                <img
-                  height={30}
-                  src={ImagesPath.appStoreLogo}
-                  alt="App store icon"
-                />
-              </button>
-              <button>
-                <span>Google Play</span>
-                <img
-                  height={30}
-                  src={ImagesPath.playStoreLogo}
-                  alt="Play store icon"
-                />
-              </button>
-            </div>
+            <StoreButtons />
             <div className={styles.accounts__mockup}>
               <img src={ImagesPath.accountsMockup} alt="" />
             </div>
           </div>
         </section>
         <footer className={styles.footer}>
-          <div className={styles.footer__about}>
-            <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
-            <p>
-              Abacus is an app that provides an all-in-one solution for managing
-              and monitoring your financial apps and crypto accounts.
-            </p>
-            <a href="">support@abacus.com</a>
-          </div>
-          <div className={styles.footer__learn}>
-            <ul>
-              <li>Learn More</li>
-              <li>Features</li>
-              <li>Security</li>
-              <li>Reviews</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
-          <div className={styles.footer__media}>
-            <p>Stay in Touch</p>
-            <div>
-              <a href="">
-                <img src={SocialMediaIcons.instagram} alt="" />
-              </a>
-              <a href="">
-                <img src={SocialMediaIcons.twitter} alt="" />
-              </a>
-              <a href="">
-                <img src={SocialMediaIcons.facebook} alt="" />
-              </a>
-              <a href="">
-                <img src={SocialMediaIcons.telegram} alt="" />
-              </a>
-              <a href="">
-                <img src={SocialMediaIcons.linkedInIcon} alt="" />
-              </a>
+          <div className={styles.footer__wrap}>
+            <div className={styles.footer__about}>
+              <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
+              <p>
+                Abacus is an app that provides an all-in-one solution for
+                managing and monitoring your financial apps and crypto accounts.
+              </p>
+              <a href="/chat">support@abacus.com</a>
             </div>
+            <div className={styles.footer__learn}>
+              <ul>
+                <li>Learn More</li>
+                <li onClick={() => scrollToSection(featureRef)}>Features</li>
+                <li onClick={() => scrollToSection(securityRef)}>Security</li>
+                <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
+                <li onClick={() => scrollToSection(faqRef)}>FAQs</li>
+              </ul>
+            </div>
+            <div className={styles.footer__media}>
+              <p>Stay in Touch</p>
+              <div>
+                <a href={AppDetails.social.instagram}>
+                  <img src={SocialMediaIcons.instagram} alt="Instagram" />
+                </a>
+                <a href={AppDetails.social.twitter}>
+                  <img src={SocialMediaIcons.twitter} alt="Twitter" />
+                </a>
+                <a href="">
+                  <img src={SocialMediaIcons.facebook} alt="Facebook" />
+                </a>
+                <a href={AppDetails.social.telegram}>
+                  <img src={SocialMediaIcons.telegram} alt="Telegram" />
+                </a>
+                <a href={AppDetails.social.linkedin}>
+                  <img src={SocialMediaIcons.linkedInIcon} alt="Linkedin" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className={styles.footer__date}>
+            <p> © {new Date().getFullYear()} Abacus Technologies</p>
           </div>
         </footer>
       </div>
@@ -423,6 +426,19 @@ const Home: NextPage = () => {
         hideProgressBar
         theme="dark"
         limit={1}
+      />
+      <MobileNav
+        showMobileNav={showMobileNav}
+        onMenuClick={(arg) => {
+          setShowMobileNav(arg);
+        }}
+        scrollToSection={(arg) => {
+          scrollToSection(arg);
+        }}
+        featureRef={featureRef}
+        securityRef={securityRef}
+        faqRef={faqRef}
+        reviewsRef={reviewsRef}
       />
     </div>
   );

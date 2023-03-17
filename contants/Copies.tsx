@@ -11,14 +11,14 @@ export const DiscoverCopies = [
     descriptio:
       "Lorem ipsum dolor sit amet consectetur, adipsciing elit, sed do eiusmod tempor.",
     imageUrl:
-      "https://res.cloudinary.com/dlinffsds/image/upload/v1678863032/Frame_192_xrhrsw.svg",
+      "https://res.cloudinary.com/getabacus/image/upload/v1678985548/app/web/didscover-mockup_s2dkkt.svg",
   },
   {
     title: "Insights & analytics",
     descriptio:
       "Lorem ipsum dolor sit amet consectetur, adipsciing elit, sed do eiusmod tempor.",
     imageUrl:
-      "https://res.cloudinary.com/dlinffsds/image/upload/v1678863032/Frame_192_xrhrsw.svg",
+      "https://res.cloudinary.com/getabacus/image/upload/v1678985636/app/web/discover-mockup-3_ewkj0g.svg",
   },
 ];
 
@@ -53,6 +53,47 @@ export const FaqInfo = [
     title: "When is the app getting launched?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing  elit, sed do eiusmod tempor incididunt ut labore et.",
+  },
+];
+
+export const MoreTwitterReviews = [
+  {
+    name: "Aleph",
+    userName: "@alephile",
+    tweet:
+      "I pretty much use only Abacus  @trustabacus for all my bank app needs now. I’m not sure how I used to survive 4 months ago 😭",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1559605248695599106/BpIw6jwO_400x400.jpg",
+  },
+  {
+    name: "Paul",
+    userName: "@adenrelepaul7",
+    tweet: "@trustabacus this app just solved one of my prob 🥹",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1603111484556546048/YF1jlHk6_400x400.jpg",
+  },
+  {
+    name: "Component13",
+    userName: "@thechrissteve",
+    tweet:
+      "@trustabacus is everything I’ve wanted in a finance product..loved every bit of it",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1567852613760073729/OKiNMHK2_400x400.jpg",
+  },
+  {
+    name: ".",
+    userName: "@rumeeedgar",
+    tweet:
+      "@trustabacus is one of the best things to happen to financial accounts management all in one place",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1616847254404358144/x3FssdXL_400x400.jpg",
+  },
+  {
+    name: "Ilèrí",
+    userName: "@pipe_dev",
+    tweet: "Love the ui of @trustabacus",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1356304279112396802/biawiYay_400x400.jpg",
   },
 ];
 
@@ -96,5 +137,3 @@ export const TwitterReviews = [
       "https://pbs.twimg.com/profile_images/1559605248695599106/BpIw6jwO_400x400.jpg",
   },
 ];
-
-

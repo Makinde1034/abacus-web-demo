@@ -35,6 +35,7 @@
 
 .nav ul li {
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .nav ul li:nth-child(1),
@@ -100,6 +101,10 @@
   outline: none;
   user-select: none;
   transition: 0.5s ease;
+}
+
+.hero__buttons button {
+  text-decoration: none;
 }
 
 .hero__buttons button:hover {
@@ -263,7 +268,7 @@
   display: flex;
   padding: 50px 100px 100px 100px;
   background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
-  background-color: rgba(0, 0, 0, 0.944);
+  background-color: var(--darkBlue);
 }
 
 .wallet__l,
@@ -355,6 +360,7 @@
   color: var(--greyWhite);
   margin-top: 10px;
   font-weight: lighter;
+  line-height: 1.5rem;
 }
 
 .reviews h3 {
@@ -363,9 +369,44 @@
   font-weight: 800;
 }
 
+.security {
+  display: flex;
+  padding: 50px 150px 50px 150px;
+  background-color: var(--darkBlue);
+}
+
+.security__l h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: white;
+}
+
+.security__l p {
+  color: var(--white);
+  margin-top: 10px;
+  font-weight: lighter;
+  line-height: 1.5rem;
+}
+
+.security__l {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.security__r {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews {
+  padding-top: 50px;
+}
 .reviews__marquee {
   overflow: hidden;
-  padding: 100px 0px 150px 0px;
+  padding: 50px 0px 150px 0px;
   width: 100%;
 }
 
@@ -525,6 +566,10 @@
 .footer {
   background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
   background-color: var(--darkBlue);
+  padding-bottom: 20px;
+}
+
+.footer__wrap {
   padding: 50px 100px 50px 100px;
   display: flex;
   /* justify-content: space-between; */
@@ -564,6 +609,7 @@
 .footer__learn ul li {
   margin-bottom: 20px;
   font-weight: lighter;
+  cursor: pointer;
 }
 
 .footer__learn ul li:nth-child(1) {
@@ -590,6 +636,11 @@
 
 .footer__media img:hover {
   transform: rotate(20deg);
+}
+
+.footer__date p {
+  text-align: center;
+  color: var(--brownGrey);
 }
 
 @keyframes slideInAnimation {
@@ -785,6 +836,33 @@
     width: 100%;
   }
 
+  .security {
+    flex-direction: column;
+    padding: 0px 20px 50px 20px;
+  }
+
+  .security__l {
+    width: 100%;
+  }
+
+  .security__l h3,
+  .security__l p {
+    text-align: center;
+  }
+
+  .security__l h3 {
+    font-size: 1.5rem;
+  }
+
+  .security__r {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .security__r img {
+    width: 80%;
+  }
+
   .reviews h3 {
     font-size: 1.5rem;
   }
@@ -825,6 +903,9 @@
   }
 
   .footer {
+  }
+
+  .footer__wrap {
     flex-direction: column;
     padding: 50px 20px 50px 20px;
   }

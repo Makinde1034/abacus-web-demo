@@ -16,6 +16,10 @@ body {
   background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
 }
 
+a{
+  text-decoration: none;
+}
+
 :root {
   --dark: #0E1521;
   --grey: #e0e0e0;

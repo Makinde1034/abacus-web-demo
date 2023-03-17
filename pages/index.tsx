@@ -136,7 +136,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     Aos.init({
       once: true,
-      duration: 1000,
+      duration: 3000,
     });
   }, []);
 
@@ -178,10 +178,10 @@ const Home: NextPage = () => {
           </div>
         </nav>
         <section className={styles.hero}>
-          <h1>
+          <h1 data-aos="fade-in">
             Mission <span>control </span>for your money
           </h1>
-          <p>
+          <p data-aos="fade-in">
             Abacus helps you better track, manage and spend your money by
             unifying your banking, investment and crypto accounts into a single,
             secure app.
@@ -256,7 +256,7 @@ const Home: NextPage = () => {
           <div className={styles.discover__grid}>
             {DiscoverCopies.map((item, index) => (
               <div
-                data-aos="fade-up"
+                data-aos="fade-in"
                 key={index}
                 className={styles.discover__grid__box}
               >
@@ -269,10 +269,10 @@ const Home: NextPage = () => {
         </section>
         <section className={styles.wallet}>
           <div className={styles.wallet__l}>
-            <h3 data-aos="fade-up">
+            <h3 data-aos="fade-in">
               Budget better with <span>wallet</span>
             </h3>
-            <p data-aos="fade-up" className={styles.wallet__l__para}>
+            <p data-aos="fade-in" className={styles.wallet__l__para}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -281,7 +281,7 @@ const Home: NextPage = () => {
             <div className={styles.wallet__l__grid}>
               {WalletInfoCopies.map((item, index) => (
                 <div
-                  data-aos="fade-up"
+                  data-aos="fade-in"
                   className={styles.wallet__grid__box}
                   key={index}
                 >
@@ -295,7 +295,7 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.wallet__r}>
             <img
-              data-aos="fade-up"
+              data-aos="fade-in"
               src={ImagesPath.walletMockup}
               alt="wallet mockup"
             />
@@ -306,12 +306,12 @@ const Home: NextPage = () => {
             <img src={ImagesPath.pocketMockup} alt="pocket mockup" />
           </div>
           <div className={styles.pocket__r}>
-            <h3 data-aos="fade-up">
+            <h3 data-aos="fade-in">
               Pay with <span>pockets</span> or directly{" "}
             </h3>
-            <h3 data-aos="fade-up"> from your bank accounts</h3>
+            <h3 data-aos="fade-in"> from your bank accounts</h3>
 
-            <p data-aos="fade-up">
+            <p data-aos="fade-in">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -319,8 +319,8 @@ const Home: NextPage = () => {
         </section>
         <section ref={securityRef} className={styles.security}>
           <div className={styles.security__l}>
-            <h3 data-aos="fade-up">We keep your funds safe</h3>
-            <p data-aos="fade-up">
+            <h3 data-aos="fade-in">We keep your funds safe</h3>
+            <p data-aos="fade-in">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -328,7 +328,7 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className={styles.security__r}>
-            <img data-aos="fade-up" src={ImagesPath.securityImage} alt="" />
+            <img data-aos="fade-in" src={ImagesPath.securityImage} alt="" />
           </div>
         </section>
         <section ref={reviewsRef} className={styles.reviews}>
@@ -366,16 +366,16 @@ const Home: NextPage = () => {
           </div> */}
 
           <div className={styles.accounts}>
-            <h3 data-aos="fade-up">
+            <h3 data-aos="fade-in">
               One app all your <span>accounts</span>
             </h3>
-            <p data-aos="fade-up">
+            <p data-aos="fade-in">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <StoreButtons />
             <div className={styles.accounts__mockup}>
-              <img data-aos="fade-up" src={ImagesPath.accountsMockup} alt="" />
+              <img data-aos="fade-in" src={ImagesPath.accountsMockup} alt="" />
             </div>
           </div>
         </section>

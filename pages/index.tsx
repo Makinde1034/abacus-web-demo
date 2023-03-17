@@ -22,6 +22,8 @@ import { motion } from "framer-motion";
 import { TweetCard } from "../components/TweetCard";
 import { StoreButtons } from "../components/StoreButtons";
 import Link from "next/link";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // default analytics id
 const DEFAULT_ANALYTICS_ID = "Ys601cFu8aCdxoeS9sKO5qnAI55lZ4ow";
@@ -131,6 +133,13 @@ const Home: NextPage = () => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(() => {
+    Aos.init({
+      once: true,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -189,48 +198,28 @@ const Home: NextPage = () => {
           <div className={styles.hero__roadmap_l}>
             <img src={ImagesPath.leftRoadMapLine} alt="road map image" />
           </div>
-          <motion.div
-            initial={{ x: "100px" }}
-            animate={{ x: "0px" }}
-            transition={{ duration: 0.5 }}
-            className={styles.carbon}
-          >
+          <div className={styles.carbon}>
             <img
               className={styles.float__icons}
               src={ImagesPath.carbonIcon}
               alt="carbon-icon"
             />
-          </motion.div>
+          </div>
           <div className={styles.arrows__r}>
             <img
               src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
               alt="arrow"
             />
           </div>
-          <motion.div
-            initial={{ x: "100px" }}
-            animate={{ x: "0px" }}
-            transition={{ duration: 0.5 }}
-            className={styles.fcmb}
-          >
+          <div className={styles.fcmb}>
             <img src={ImagesPath.fcmbIcon} alt="arrow" />
-          </motion.div>
-          <motion.div
-            initial={{ x: "-100px" }}
-            animate={{ x: "0px" }}
-            transition={{ duration: 0.5 }}
-            className={styles.kuda}
-          >
+          </div>
+          <div className={styles.kuda}>
             <img src={ImagesPath.kudaIcon} alt="kuda-icon" />
-          </motion.div>
-          <motion.div
-            initial={{ x: "-100px" }}
-            animate={{ x: "0px" }}
-            transition={{ duration: 0.5 }}
-            className={styles.abeg}
-          >
+          </div>
+          <div className={styles.abeg}>
             <img src={ImagesPath.abegIcon} alt="abeg icon" />
-          </motion.div>
+          </div>
           <div className={styles.arrows__l}>
             <img
               src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
@@ -266,7 +255,11 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.discover__grid}>
             {DiscoverCopies.map((item, index) => (
-              <div key={index} className={styles.discover__grid__box}>
+              <div
+                data-aos="fade-up"
+                key={index}
+                className={styles.discover__grid__box}
+              >
                 <img src={item.imageUrl} alt="mockups" />
                 <h3>{item.title}</h3>
                 <p>{item.descriptio}</p>
@@ -276,10 +269,10 @@ const Home: NextPage = () => {
         </section>
         <section className={styles.wallet}>
           <div className={styles.wallet__l}>
-            <h3>
+            <h3 data-aos="fade-up">
               Budget better with <span>wallet</span>
             </h3>
-            <p className={styles.wallet__l__para}>
+            <p data-aos="fade-up" className={styles.wallet__l__para}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -287,10 +280,11 @@ const Home: NextPage = () => {
             </p>
             <div className={styles.wallet__l__grid}>
               {WalletInfoCopies.map((item, index) => (
-                <div className={styles.wallet__grid__box} key={index}>
-                  {/* <div style={{ marginRight: "10px" }}>
-                    <img height={30} src={item.imageUrl} alt="wallet" />
-                  </div> */}
+                <div
+                  data-aos="fade-up"
+                  className={styles.wallet__grid__box}
+                  key={index}
+                >
                   <div>
                     <p>{item.title}</p>
                     <p>{item.description}</p>
@@ -300,7 +294,11 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className={styles.wallet__r}>
-            <img src={ImagesPath.walletMockup} alt="wallet mockup" />
+            <img
+              data-aos="fade-up"
+              src={ImagesPath.walletMockup}
+              alt="wallet mockup"
+            />
           </div>
         </section>
         <section className={styles.pocket}>
@@ -308,12 +306,12 @@ const Home: NextPage = () => {
             <img src={ImagesPath.pocketMockup} alt="pocket mockup" />
           </div>
           <div className={styles.pocket__r}>
-            <h3>
+            <h3 data-aos="fade-up">
               Pay with <span>pockets</span> or directly{" "}
             </h3>
-            <h3> from your bank accounts</h3>
+            <h3 data-aos="fade-up"> from your bank accounts</h3>
 
-            <p>
+            <p data-aos="fade-up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -321,8 +319,8 @@ const Home: NextPage = () => {
         </section>
         <section ref={securityRef} className={styles.security}>
           <div className={styles.security__l}>
-            <h3>We keep your funds safe</h3>
-            <p>
+            <h3 data-aos="fade-up">We keep your funds safe</h3>
+            <p data-aos="fade-up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -330,7 +328,7 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className={styles.security__r}>
-            <img src={ImagesPath.securityImage} alt="" />
+            <img data-aos="fade-up" src={ImagesPath.securityImage} alt="" />
           </div>
         </section>
         <section ref={reviewsRef} className={styles.reviews}>
@@ -341,15 +339,15 @@ const Home: NextPage = () => {
                 <TweetCard key={index} {...item} />
               ))}
               {tweets.slice(0, 4).map((item, index) => (
-                <TweetCard key={index}  {...item} />
+                <TweetCard key={index} {...item} />
               ))}
             </div>
             <div className={styles.reviews__container2}>
               {MoreTwitterReviews.map((item, index) => (
-                <TweetCard key={index}  {...item} />
+                <TweetCard key={index} {...item} />
               ))}
               {MoreTwitterReviews.slice(0, 4).map((item, index) => (
-                <TweetCard key={index}  {...item} />
+                <TweetCard key={index} {...item} />
               ))}
             </div>
           </div>
@@ -368,16 +366,16 @@ const Home: NextPage = () => {
           </div> */}
 
           <div className={styles.accounts}>
-            <h3>
+            <h3 data-aos="fade-up">
               One app all your <span>accounts</span>
             </h3>
-            <p>
+            <p data-aos="fade-up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <StoreButtons />
             <div className={styles.accounts__mockup}>
-              <img src={ImagesPath.accountsMockup} alt="" />
+              <img data-aos="fade-up" src={ImagesPath.accountsMockup} alt="" />
             </div>
           </div>
         </section>

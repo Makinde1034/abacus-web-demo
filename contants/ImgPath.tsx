@@ -14,7 +14,7 @@ export const ImagesPath = {
   fcmbIcon:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678878837/fcmb-icon_elrb7l.svg",
   kudaIcon:
-    "https://res.cloudinary.com/dlinffsds/image/upload/v1678825544/kuda_i2nzjt.svg",
+    "https://res.cloudinary.com/getabacus/image/upload/v1679042665/app/web/bamboo-icon_kgfmoc.svg",
   abegIcon:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678825943/abeg-icon_o28wdp.svg",
   startIcon:

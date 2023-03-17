@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import { AppDetails } from "../contants/App";
 import { v4 as uuidv4 } from "uuid";
 import { MobileNav } from "../components/MobileNavigation";
+import { FaqGrid } from "../components/FaqGrid";
 
 import { AnalyticsBrowser } from "@segment/analytics-next";
 import { DiscoverCopies, WalletInfoCopies } from "../contants/Copies";
@@ -136,6 +137,8 @@ const Home: NextPage = () => {
           <title>Abacus - Manage your money</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#0E1521" />
+          <meta name="msapplication-navbutton-color" content="#0E1521" />
           <meta name="description" content="Misson control for your money" />
           <meta name="keywords" content="Misson control for your money" />
           <meta property="og:title" content="Misson control for your money" />
@@ -350,15 +353,19 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        <FaqGrid />
         <section ref={faqRef} className={styles.faq}>
-          <div className={styles.faq__box}>
+          {/* incase the FAQ section needs to be changed */}
+          {/* <div className={styles.faq__box}>
             <div className={styles.faq__box__l}>
               <img src={ImagesPath.faqImage} alt="" />
             </div>
             <div className={styles.faq__box__r}>
               <Faq />
+              <FaqGrid />
             </div>
-          </div>
+          </div> */}
+
           <div className={styles.accounts}>
             <h3>
               One app all your <span>accounts</span>

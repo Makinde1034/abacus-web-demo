@@ -1,3 +1,5 @@
+import { AppDetails } from "./App";
+
 export const DiscoverCopies = [
   {
     title: "One app all your accounts",
@@ -45,14 +47,64 @@ export const WalletInfoCopies = [
 
 export const FaqInfo = [
   {
-    title: "What does Abacus do?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing  elit, sed do eiusmod tempor incididunt ut labore et.",
+    id: 1,
+    question: "What is Abacus?",
+    answer:
+      "Abacus is a personal finance tool that allows you to combine your financial accounts in a single, unified channel for better management and spending of your money.",
   },
+
   {
-    title: "When is the app getting launched?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing  elit, sed do eiusmod tempor incididunt ut labore et.",
+    id: 2,
+    question: "Is my money and information safe on Abacus?",
+    answer:
+      "Your security and privacy lie at the heart of Abacus. We know there’s no room for compromise when it comes to your money, and we have put in place a bank-grade security system to keep your accounts and data protected. With BVN verification, industry-standard encryption, and fraud detection, we protect your information just like we’d want ours to be treated. ",
+  },
+
+  {
+    id: 3,
+    question: "Does Abacus have access to my money?",
+    answer:
+      "Please note that Abacus doesn’t have access to your money and we can only create transactions on your behalf. We will always need your account’s pin or password to complete any transaction, as we don't save it.",
+  },
+
+  {
+    id: 4,
+    question: "What do I need to set up an account on Abacus?",
+    answer:
+      "All you just need to do is to verify your email address and connect at least one financial account to Abacus to get started.",
+  },
+
+  {
+    id: 5,
+    question: "Why should I use Abacus?",
+    answer:
+      "We're on a mission to empower you so that you can take charge of your finances. We believe providing access to better financial tools improves people’s lives, so we’re taking money matters into our own hands.",
+  },
+
+  {
+    id: 6,
+    question: "Does Abacus charge a fee?",
+    answer: "No, we do not charge you any fee for using Abacus.",
+  },
+
+  {
+    id: 7,
+    question: "How do I connect an account?",
+    answer:
+      "To connect an account, all you have to do is enter your login credentials for the account on Abacus. For some institutions, you will also have to enter an OTP to validate.",
+  },
+
+  {
+    id: 8,
+    question: "Can I disconnect my account on Abacus?",
+    answer:
+      "Yes, you can always unlink your account at any time on Abacus. You can even delete your entire Abacus account. To disconnect an account from Abacus, all you have to do is go to the connection and click disconnect, and it will be disconnected.",
+  },
+
+  {
+    id: 9,
+    question: "How do I contact Abacus support?",
+    answer: `If you have more questions or need help, please reach out to us at any time at ${AppDetails.support}. You can also set up a meeting with members of our team here.`,
   },
 ];
 

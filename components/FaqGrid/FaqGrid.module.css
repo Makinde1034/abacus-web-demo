@@ -1,0 +1,51 @@
+.faqgrid {
+  background-color: white;
+  padding: 0px 100px 50px 100px;
+}
+
+.faqgrid__header h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.faqgrid__header p {
+  margin-top: 10px;
+  font-weight: lighter;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.faq__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.faq__box {
+}
+
+.faq__box h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.faq__box p {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .faqgrid {
+    padding: 0px 20px 50px 20px;
+  }
+
+  .faqgrid__header p {
+    width: 100%;
+  }
+
+  .faq__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}

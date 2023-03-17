@@ -13,7 +13,7 @@ export const Faq = () => {
     if (activeIndex !== index) {
       setShowDescription(true);
       setActiveIndex(index);
-      return
+      return;
     }
     setShowDescription(!showDescription);
     setActiveIndex(index);
@@ -36,7 +36,7 @@ export const Faq = () => {
               className={styles.faq__question}
               key={index}
             >
-              <h3>{item.title}</h3>
+              <h3>{item.question}</h3>
               <div className={styles.icon}>
                 {
                   <img
@@ -52,7 +52,7 @@ export const Faq = () => {
             </div>
             {showDescription && isActiveIndex ? (
               <div className={styles.faq__description}>
-                <p>{item.description}</p>
+                <p>{item.answer}</p>
               </div>
             ) : null}
           </div>

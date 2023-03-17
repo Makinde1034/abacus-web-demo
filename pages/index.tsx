@@ -136,7 +136,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     Aos.init({
       once: true,
-      duration: 3000,
+      duration: 1000,
     });
   }, []);
 
@@ -177,54 +177,55 @@ const Home: NextPage = () => {
             <img src={ImagesPath.menuIcon} alt="menu icon" />
           </div>
         </nav>
-        <section className={styles.hero}>
-          <h1 data-aos="fade-in">
-            Mission <span>control </span>for your money
-          </h1>
-          <p data-aos="fade-in">
-            Abacus helps you better track, manage and spend your money by
-            unifying your banking, investment and crypto accounts into a single,
-            secure app.
-          </p>
-          <StoreButtons />
-
-          <div className={styles.hero__mockup}>
-            <img src={ImagesPath.heroImage} alt="hero-mockup" />
-          </div>
-          {/* absolute elements */}
-          <div className={styles.hero__roadmap_r}>
-            <img src={ImagesPath.rightRoadMapLine} alt="road map image" />
-          </div>
-          <div className={styles.hero__roadmap_l}>
-            <img src={ImagesPath.leftRoadMapLine} alt="road map image" />
-          </div>
-          <div className={styles.carbon}>
-            <img
-              className={styles.float__icons}
-              src={ImagesPath.carbonIcon}
-              alt="carbon-icon"
-            />
-          </div>
-          <div className={styles.arrows__r}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
-              alt="arrow"
-            />
-          </div>
-          <div className={styles.fcmb}>
-            <img src={ImagesPath.fcmbIcon} alt="arrow" />
-          </div>
-          <div className={styles.kuda}>
-            <img src={ImagesPath.kudaIcon} alt="kuda-icon" />
-          </div>
-          <div className={styles.abeg}>
-            <img src={ImagesPath.abegIcon} alt="abeg icon" />
-          </div>
-          <div className={styles.arrows__l}>
-            <img
-              src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
-              alt=""
-            />
+        <section className="section">
+          <div className={styles.hero}>
+            <h1 data-aos="fade-in">
+              Mission <span>control </span>for your money
+            </h1>
+            <p data-aos="fade-in">
+              Abacus helps you better track, manage and spend your money by
+              unifying your banking, investment and crypto accounts into a
+              single, secure app.
+            </p>
+            <StoreButtons />
+            <div className={styles.hero__mockup}>
+              <img src={ImagesPath.heroImage} alt="hero-mockup" />
+            </div>
+            {/* absolute elements */}
+            <div className={styles.hero__roadmap_r}>
+              <img src={ImagesPath.rightRoadMapLine} alt="road map image" />
+            </div>
+            <div className={styles.hero__roadmap_l}>
+              <img src={ImagesPath.leftRoadMapLine} alt="road map image" />
+            </div>
+            <div className={styles.carbon}>
+              <img
+                className={styles.float__icons}
+                src={ImagesPath.carbonIcon}
+                alt="carbon-icon"
+              />
+            </div>
+            <div className={styles.arrows__r}>
+              <img
+                src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
+                alt="arrow"
+              />
+            </div>
+            <div className={styles.fcmb}>
+              <img src={ImagesPath.fcmbIcon} alt="arrow" />
+            </div>
+            <div className={styles.kuda}>
+              <img src={ImagesPath.kudaIcon} alt="kuda-icon" />
+            </div>
+            <div className={styles.abeg}>
+              <img src={ImagesPath.abegIcon} alt="abeg icon" />
+            </div>
+            <div className={styles.arrows__l}>
+              <img
+                src="https://res.cloudinary.com/dlinffsds/image/upload/v1678825362/arrows_iyjbvc.svg"
+                alt=""
+              />
+            </div>
           </div>
         </section>
         <section className={styles.marquee}>
@@ -237,118 +238,128 @@ const Home: NextPage = () => {
             ))}
           </div>
         </section>
-        <section>
-          <div ref={featureRef} className={styles.discover}>
-            <div className={styles.discover__l}>
-              <h3>
-                Discover the key features <br /> of Abacus mobile app
-              </h3>
-            </div>
-            <div className={styles.discover__r}>
-              <p>
-                This innovative app is equipped with a range of powerful
-                features that can help you stay on top of your finances and
-                achieve your financial goals. Here are the features that makes
-                it valuable.
-              </p>
-            </div>
-          </div>
-          <div className={styles.discover__grid}>
-            {DiscoverCopies.map((item, index) => (
-              <div
-                data-aos="fade-in"
-                key={index}
-                className={styles.discover__grid__box}
-              >
-                <img src={item.imageUrl} alt="mockups" />
-                <h3>{item.title}</h3>
-                <p>{item.descriptio}</p>
+        <section className="section__white">
+          <div>
+            <div ref={featureRef} className={styles.discover}>
+              <div className={styles.discover__l}>
+                <h3>
+                  Discover the key features <br /> of Abacus mobile app
+                </h3>
               </div>
-            ))}
-          </div>
-        </section>
-        <section className={styles.wallet}>
-          <div className={styles.wallet__l}>
-            <h3 data-aos="fade-in">
-              Budget better with <span>wallet</span>
-            </h3>
-            <p data-aos="fade-in" className={styles.wallet__l__para}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat..
-            </p>
-            <div className={styles.wallet__l__grid}>
-              {WalletInfoCopies.map((item, index) => (
+              <div className={styles.discover__r}>
+                <p>
+                  This innovative app is equipped with a range of powerful
+                  features that can help you stay on top of your finances and
+                  achieve your financial goals. Here are the features that makes
+                  it valuable.
+                </p>
+              </div>
+            </div>
+            <div className={styles.discover__grid}>
+              {DiscoverCopies.map((item, index) => (
                 <div
                   data-aos="fade-in"
-                  className={styles.wallet__grid__box}
                   key={index}
+                  className={styles.discover__grid__box}
                 >
-                  <div>
-                    <p>{item.title}</p>
-                    <p>{item.description}</p>
-                  </div>
+                  <img src={item.imageUrl} alt="mockups" />
+                  <h3>{item.title}</h3>
+                  <p>{item.descriptio}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className={styles.wallet__r}>
-            <img
-              data-aos="fade-in"
-              src={ImagesPath.walletMockup}
-              alt="wallet mockup"
-            />
-          </div>
         </section>
-        <section className={styles.pocket}>
-          <div className={styles.pocket__l}>
-            <img src={ImagesPath.pocketMockup} alt="pocket mockup" />
-          </div>
-          <div className={styles.pocket__r}>
-            <h3 data-aos="fade-in">
-              Pay with <span>pockets</span> or directly{" "}
-            </h3>
-            <h3 data-aos="fade-in"> from your bank accounts</h3>
-
-            <p data-aos="fade-in">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </section>
-        <section ref={securityRef} className={styles.security}>
-          <div className={styles.security__l}>
-            <h3 data-aos="fade-in">We keep your funds safe</h3>
-            <p data-aos="fade-in">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex commodo.
-            </p>
-          </div>
-          <div className={styles.security__r}>
-            <img data-aos="fade-in" src={ImagesPath.securityImage} alt="" />
-          </div>
-        </section>
-        <section ref={reviewsRef} className={styles.reviews}>
-          <h3>The reviews speak for themselves</h3>
-          <div className={styles.reviews__marquee}>
-            <div className={styles.reviews__container}>
-              {tweets.map((item, index) => (
-                <TweetCard key={index} {...item} />
-              ))}
-              {tweets.slice(0, 4).map((item, index) => (
-                <TweetCard key={index} {...item} />
-              ))}
+        <section className="section">
+          <div className={styles.wallet}>
+            <div className={styles.wallet__l}>
+              <h3 data-aos="fade-in">
+                Budget better with <span>wallet</span>
+              </h3>
+              <p data-aos="fade-in" className={styles.wallet__l__para}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat..
+              </p>
+              <div className={styles.wallet__l__grid}>
+                {WalletInfoCopies.map((item, index) => (
+                  <div
+                    data-aos="fade-in"
+                    className={styles.wallet__grid__box}
+                    key={index}
+                  >
+                    <div>
+                      <p>{item.title}</p>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className={styles.reviews__container2}>
-              {MoreTwitterReviews.map((item, index) => (
-                <TweetCard key={index} {...item} />
-              ))}
-              {MoreTwitterReviews.slice(0, 4).map((item, index) => (
-                <TweetCard key={index} {...item} />
-              ))}
+            <div className={styles.wallet__r}>
+              <img
+                data-aos="fade-in"
+                src={ImagesPath.walletMockup}
+                alt="wallet mockup"
+              />
+            </div>
+          </div>
+        </section>
+        <section className="section__white">
+          <div className={styles.pocket}>
+            <div className={styles.pocket__l}>
+              <img src={ImagesPath.pocketMockup} alt="pocket mockup" />
+            </div>
+            <div className={styles.pocket__r}>
+              <h3 data-aos="fade-in">
+                Pay with <span>pockets</span> or directly{" "}
+              </h3>
+              <h3 data-aos="fade-in"> from your bank accounts</h3>
+
+              <p data-aos="fade-in">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="section__blue" ref={securityRef}>
+          <div className={styles.security}>
+            <div className={styles.security__l}>
+              <h3 data-aos="fade-in">We keep your funds safe</h3>
+              <p data-aos="fade-in">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex commodo.
+              </p>
+            </div>
+            <div className={styles.security__r}>
+              <img data-aos="fade-in" src={ImagesPath.securityImage} alt="" />
+            </div>
+          </div>
+        </section>
+        <section ref={reviewsRef} className="section__white">
+          <div className={styles.reviews}>
+            <h3>The reviews speak for themselves</h3>
+            <div className={styles.reviews__marquee}>
+              <div className={styles.reviews__container}>
+                {tweets.map((item, index) => (
+                  <TweetCard key={index} {...item} />
+                ))}
+                {tweets.slice(0, 4).map((item, index) => (
+                  <TweetCard key={index} {...item} />
+                ))}
+              </div>
+              <div className={styles.reviews__container2}>
+                {MoreTwitterReviews.map((item, index) => (
+                  <TweetCard key={index} {...item} />
+                ))}
+                {MoreTwitterReviews.slice(0, 4).map((item, index) => (
+                  <TweetCard key={index} {...item} />
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -379,48 +390,51 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <footer className={styles.footer}>
-          <div className={styles.footer__wrap}>
-            <div className={styles.footer__about}>
-              <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
-              <p>
-                Abacus is an app that provides an all-in-one solution for
-                managing and monitoring your financial apps and crypto accounts.
-              </p>
-              <Link href="/chat">support@abacus.com</Link>
-            </div>
-            <div className={styles.footer__learn}>
-              <ul>
-                <li>Learn More</li>
-                <li onClick={() => scrollToSection(featureRef)}>Features</li>
-                <li onClick={() => scrollToSection(securityRef)}>Security</li>
-                <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
-                <li onClick={() => scrollToSection(faqRef)}>FAQs</li>
-              </ul>
-            </div>
-            <div className={styles.footer__media}>
-              <p>Stay in Touch</p>
-              <div>
-                <a href={AppDetails.social.instagram}>
-                  <img src={SocialMediaIcons.instagram} alt="Instagram" />
-                </a>
-                <a href={AppDetails.social.twitter}>
-                  <img src={SocialMediaIcons.twitter} alt="Twitter" />
-                </a>
-                <a href="">
-                  <img src={SocialMediaIcons.facebook} alt="Facebook" />
-                </a>
-                <a href={AppDetails.social.telegram}>
-                  <img src={SocialMediaIcons.telegram} alt="Telegram" />
-                </a>
-                <a href={AppDetails.social.linkedin}>
-                  <img src={SocialMediaIcons.linkedInIcon} alt="Linkedin" />
-                </a>
+        <footer className="section">
+          <div className={styles.footer}>
+            <div className={styles.footer__wrap}>
+              <div className={styles.footer__about}>
+                <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
+                <p>
+                  Abacus is an app that provides an all-in-one solution for
+                  managing and monitoring your financial apps and crypto
+                  accounts.
+                </p>
+                <Link href="/chat">support@abacus.com</Link>
+              </div>
+              <div className={styles.footer__learn}>
+                <ul>
+                  <li>Learn More</li>
+                  <li onClick={() => scrollToSection(featureRef)}>Features</li>
+                  <li onClick={() => scrollToSection(securityRef)}>Security</li>
+                  <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
+                  <li onClick={() => scrollToSection(faqRef)}>FAQs</li>
+                </ul>
+              </div>
+              <div className={styles.footer__media}>
+                <p>Stay in Touch</p>
+                <div>
+                  <a href={AppDetails.social.instagram}>
+                    <img src={SocialMediaIcons.instagram} alt="Instagram" />
+                  </a>
+                  <a href={AppDetails.social.twitter}>
+                    <img src={SocialMediaIcons.twitter} alt="Twitter" />
+                  </a>
+                  <a href="">
+                    <img src={SocialMediaIcons.facebook} alt="Facebook" />
+                  </a>
+                  <a href={AppDetails.social.telegram}>
+                    <img src={SocialMediaIcons.telegram} alt="Telegram" />
+                  </a>
+                  <a href={AppDetails.social.linkedin}>
+                    <img src={SocialMediaIcons.linkedInIcon} alt="Linkedin" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.footer__date}>
-            <p> © {new Date().getFullYear()} Abacus Technologies</p>
+            <div className={styles.footer__date}>
+              <p> © {new Date().getFullYear()} Abacus Technologies</p>
+            </div>
           </div>
         </footer>
       </div>

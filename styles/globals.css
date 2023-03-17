@@ -13,7 +13,6 @@ body {
     sans-serif;
 
   font-weight: 600;
-  background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
 }
 
 a {
@@ -56,4 +55,22 @@ a {
 }
 [data-aos="fade-in"].aos-animate {
   opacity: 1;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
+  background-color: var(--darkBlue);
+}
+
+.section__white {
+  display: flex;
+  justify-content: center;
+}
+
+.section__blue {
+  display: flex;
+  justify-content: center;
+  background-color: var(--darkBlue);
 }

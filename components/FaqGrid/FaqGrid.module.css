@@ -1,6 +1,7 @@
 .faqgrid {
   background-color: white;
   padding: 0px 100px 50px 100px;
+  max-width: 1600px;
 }
 
 .faqgrid__header h3 {

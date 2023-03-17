@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 1600px;
+  /* max-width: 2000px; */
   overflow-x: hidden;
 }
 
@@ -61,6 +61,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  max-width: 1600px;
 }
 
 .hero h1 {
@@ -133,12 +134,12 @@
   margin-top: 30px;
   animation: slideInAnimation ease 1s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards; z-index: 30;
+  animation-fill-mode: forwards;
+  z-index: 30;
 }
 
 .hero__mockup img {
   width: 100%;
- 
 }
 
 .hero__roadmap_r {
@@ -228,6 +229,8 @@
 .discover {
   display: flex;
   padding: 50px 100px 50px 100px;
+  background-color: white;
+  max-width: 1600px;
 }
 
 .discover__l,
@@ -257,6 +260,7 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 
 .discover__grid__box {
@@ -280,8 +284,9 @@
 .wallet {
   display: flex;
   padding: 50px 100px 100px 100px;
-  background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
-  background-color: var(--darkBlue);
+  max-width: 1600px;
+  /* background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
+  background-color: var(--darkBlue); */
 }
 
 .wallet__l,
@@ -339,6 +344,7 @@
 .pocket {
   display: flex;
   padding: 50px 150px 50px 150px;
+  background-color: white;
 }
 
 .pocket__l,
@@ -385,7 +391,8 @@
 .security {
   display: flex;
   padding: 50px 150px 50px 150px;
-  background-color: var(--darkBlue);
+
+  max-width: 1600px;
 }
 
 .security__l h3 {
@@ -420,6 +427,8 @@
 
 .reviews {
   padding-top: 50px;
+  background-color: white;
+  max-width: 1600px;
 }
 .reviews__marquee {
   overflow: hidden;
@@ -584,16 +593,17 @@
   background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
   background-color: var(--darkBlue);
   padding-bottom: 20px;
+ 
 }
 
 .footer__wrap {
-  padding: 50px 100px 50px 100px;
+  padding: 50px 150px 50px 50px;
   display: flex;
-  /* justify-content: space-between; */
+
 }
 
 .footer__about {
-  width: 40%;
+  width: 60%;
 }
 
 .footer__about img {

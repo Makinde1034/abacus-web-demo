@@ -155,6 +155,10 @@ const Home: NextPage = () => {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.trustabacus.com/" />
           <meta
+            property="og:image"
+            content="https://res.cloudinary.com/getabacus/image/upload/h_900/web/mockup.png"
+          />
+          <meta
             property="og:description"
             content="Misson control for your money."
           />

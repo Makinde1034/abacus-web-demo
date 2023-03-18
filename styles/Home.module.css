@@ -16,6 +16,9 @@
   justify-content: space-between;
   padding: 0px 100px 0px 100px;
   height: 60px;
+  position: fixed;
+  z-index: 500;
+  width: 100%;
 }
 
 .nav__logo {
@@ -56,7 +59,7 @@
   width: 100%;
   background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
   background-color: var(--darkBlue);
-  padding-top: 50px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,6 +139,7 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   z-index: 30;
+  margin-top: 60px;
 }
 
 .hero__mockup img {
@@ -146,25 +150,27 @@
   position: absolute;
   right: 0;
   z-index: 10;
+  top: 100px;
 }
 
 .hero__roadmap_l {
   position: absolute;
   left: 0;
+  top: 100px;
   z-index: 10;
 }
 
 .carbon {
   position: absolute;
   right: 130px;
-  top: 30px;
+  top: 85px;
   z-index: 30;
 }
 
 .fcmb {
   position: absolute;
-  left: 230px;
-  top: 560px;
+  left: 280px;
+  top: 630px;
   z-index: 30;
 }
 
@@ -184,8 +190,8 @@
 
 .kuda {
   position: absolute;
-  right: 250px;
-  top: 560px;
+  right: 290px;
+  top:630px;
   z-index: 30;
 }
 
@@ -193,8 +199,11 @@
   position: absolute;
   left: 125px;
   z-index: 30;
-  top: 30px;
+  top: 85px;
 }
+
+
+
 
 /* ends here */
 
@@ -431,7 +440,6 @@
   max-width: 1600px;
 }
 
-
 .reviews__marquee {
   overflow: hidden;
   padding: 50px 0px 50px 0px;
@@ -595,13 +603,11 @@
   background-image: url("https://res.cloudinary.com/getabacus/image/upload/v1663946652/web/bg.png");
   background-color: var(--darkBlue);
   padding-bottom: 20px;
- 
 }
 
 .footer__wrap {
   padding: 50px 150px 50px 50px;
   display: flex;
-
 }
 
 .footer__about {
@@ -719,6 +725,7 @@
 
   .hero h1 {
     font-size: 1.85rem;
+    margin-top: 50px;
   }
 
   .hero p {
@@ -893,11 +900,8 @@
     width: 80%;
   }
 
-
-
   .reviews h3 {
     font-size: 1.2rem;
-    
   }
 
   .reviews__marquee {
@@ -976,6 +980,24 @@
   .kuda,
   .arrows__r {
     display: none;
+  }
+
+  .wallet {
+    flex-direction: column;
+  }
+
+  .wallet__l,
+  .wallet__r {
+    width: 100%;
+  }
+
+  .pocket {
+    flex-direction: column;
+  }
+
+  .pocket__l,
+  .pocket__r {
+    width: 100%;
   }
 
   .footer__about {

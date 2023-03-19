@@ -1,5 +1,5 @@
 .nav {
-  position: absolute;
+  position: fixed;
   top: 70px;
   width: 90%;
   background-color: white;
@@ -7,10 +7,11 @@
   transform: translatex(-50%, -50%);
   padding: 30px;
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   transform: translateY(0px);
   visibility: hidden;
   user-select: none;
+  z-index: 3000;
 }
 
 .nav__active {
@@ -35,4 +36,20 @@
 
 .nav__close img {
   height: 25px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 990;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.backdrop__active {
+  visibility: visible;
 }

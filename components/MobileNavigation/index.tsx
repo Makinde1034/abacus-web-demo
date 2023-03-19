@@ -12,30 +12,44 @@ export const MobileNav = (props: {
   faqRef: any;
   reviewsRef: any;
 }) => {
-  const [showNav, setShowNav] = useState(false);
-  const { featureRef, securityRef, faqRef, reviewsRef, scrollToSection } =
-    props;
+  const {
+    featureRef,
+    securityRef,
+    faqRef,
+    reviewsRef,
+    scrollToSection,
+    onMenuClick,
+    showMobileNav,
+  } = props;
 
   return (
-    <div
-      className={
-        props.showMobileNav
-          ? `${styles.nav} ${styles.nav__active} `
-          : styles.nav
-      }
-    >
-      <ul onClick={() => props.onMenuClick(false)}>
-        <li onClick={() => scrollToSection(featureRef)}>Features</li>
-        <li onClick={() => scrollToSection(securityRef)}>Security</li>
-        <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
-        <li onClick={() => scrollToSection(faqRef)}>FAQs</li>
-      </ul>
+    <>
       <div
-        onClick={() => props.onMenuClick(false)}
-        className={styles.nav__close}
+        className={
+          showMobileNav ? `${styles.nav} ${styles.nav__active} ` : styles.nav
+        }
       >
-        <img src={ImagesPath.closeIcon} alt="close icon" />
+        <ul onClick={() => onMenuClick(false)}>
+          <li onClick={() => scrollToSection(featureRef)}>Features</li>
+          <li onClick={() => scrollToSection(securityRef)}>Security</li>
+          <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
+          <li onClick={() => scrollToSection(faqRef)}>FAQs</li>
+        </ul>
+        <div
+          onClick={() => props.onMenuClick(false)}
+          className={styles.nav__close}
+        >
+          <img src={ImagesPath.closeIcon} alt="close icon" />
+        </div>
       </div>
-    </div>
+      <div
+        onClick={() => onMenuClick(false)}
+        className={
+          showMobileNav
+            ? `${styles.backdrop} ${styles.backdrop__active}`
+            : styles.backdrop
+        }
+      ></div>
+    </>
   );
 };

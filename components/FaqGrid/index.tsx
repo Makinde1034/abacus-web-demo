@@ -8,7 +8,7 @@ export const FaqGrid = () => {
         <div className={styles.faqgrid__header}>
           <h3 data-aos="fade-in">Frequently Asked Questions</h3>
           <p data-aos="fade-in">
-            Can't find the answer you are looking for? Please reach out to
+            Can&apos;t find the answer you are looking for? Please reach out to
             support@trustabacus.com
           </p>
         </div>

@@ -7,13 +7,12 @@
 .faqgrid__header h3 {
   font-size: 2rem;
   margin-bottom: 10px;
-  font-weight: 600;
 }
 
 .faqgrid__header p {
   margin-top: 10px;
   font-weight: lighter;
-  width: 50%;
+  width: 40%;
   margin-bottom: 50px;
 
   line-height: 1.5rem;

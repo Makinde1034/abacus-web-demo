@@ -44,7 +44,7 @@
 .nav ul li:nth-child(1),
 .nav ul li:nth-child(2),
 .nav ul li:nth-child(3) {
-  margin-right: 50px;
+  margin-right: 80px;
 }
 
 .nav__menu {
@@ -191,7 +191,7 @@
 .kuda {
   position: absolute;
   right: 290px;
-  top:630px;
+  top: 630px;
   z-index: 30;
 }
 
@@ -201,9 +201,6 @@
   z-index: 30;
   top: 85px;
 }
-
-
-
 
 /* ends here */
 
@@ -317,7 +314,7 @@
 }
 
 .wallet__l__para {
-  color: var(--brownGrey);
+  color: #dae3f3;
   line-height: 1.5rem;
   font-weight: lighter;
   margin-top: 10px;
@@ -340,7 +337,7 @@
 }
 
 .wallet__grid__box p:nth-child(2) {
-  color: var(--brownGrey);
+  color: #dae3f3;
   font-weight: lighter;
   margin-top: 5px;
 }
@@ -407,7 +404,6 @@
 .security__l h3 {
   font-size: 2rem;
   margin-bottom: 10px;
-  font-weight: 800;
   color: white;
 }
 
@@ -606,8 +602,10 @@
 }
 
 .footer__wrap {
-  padding: 50px 150px 50px 50px;
+  padding: 50px 150px 50px 100px;
   display: flex;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .footer__about {

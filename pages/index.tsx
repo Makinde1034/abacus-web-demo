@@ -144,14 +144,23 @@ const Home: NextPage = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <Head>
-          <title>Abacus - Manage your money</title>
+          <title>Abacus - Mission control for your money</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#0E1521" />
           <meta name="msapplication-navbutton-color" content="#0E1521" />
-          <meta name="description" content="Misson control for your money" />
-          <meta name="keywords" content="Misson control for your money" />
-          <meta property="og:title" content="Misson control for your money" />
+          <meta
+            name="description"
+            content="Abacus - Mission control for your money"
+          />
+          <meta
+            name="keywords"
+            content="Abacus - Mission control for your money"
+          />
+          <meta
+            property="og:title"
+            content="Abacus - Mission control for your money"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.trustabacus.com/" />
           <meta
@@ -246,9 +255,7 @@ const Home: NextPage = () => {
           <div>
             <div ref={featureRef} className={styles.discover}>
               <div className={styles.discover__l}>
-                <h3>
-                  Discover the key features <br /> of Abacus mobile app
-                </h3>
+                <h3>What can you do with Abacus?</h3>
               </div>
               <div className={styles.discover__r}>
                 <p>
@@ -278,13 +285,14 @@ const Home: NextPage = () => {
           <div className={styles.wallet}>
             <div className={styles.wallet__l}>
               <h3 data-aos="fade-in">
-                Budget better with <span>wallet</span>
+                Budget smarter with Abacus <span>wallet</span>
               </h3>
               <p data-aos="fade-in" className={styles.wallet__l__para}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat..
+                Gain better control over your money by planning and budgeting on
+                Abacus. Create pockets for essential expenses (e.g., food,
+                rent). Allocate funds to each pocket as budgeted expenses and
+                track spending against the plans to manage your money more
+                effectively.
               </p>
               <div className={styles.wallet__l__grid}>
                 {WalletInfoCopies.map((item, index) => (
@@ -317,13 +325,14 @@ const Home: NextPage = () => {
             </div>
             <div className={styles.pocket__r}>
               <h3 data-aos="fade-in">
-                Pay with <span>pockets</span> or directly{" "}
+                Pay using <span>Abacus</span> or
               </h3>
-              <h3 data-aos="fade-in"> from your bank accounts</h3>
+              <h3 data-aos="fade-in"> your linked bank accounts</h3>
 
               <p data-aos="fade-in">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Pay anyone, anytime. Use your bank accounts or Abacus wallet to
+                transfer money to friends and family, top up your phone, or pay
+                your bills
               </p>
             </div>
           </div>
@@ -331,12 +340,12 @@ const Home: NextPage = () => {
         <section className="section__blue" ref={securityRef}>
           <div className={styles.security}>
             <div className={styles.security__l}>
-              <h3 data-aos="fade-in">We keep your funds safe</h3>
+              <h3 data-aos="fade-in">Your finances, safe and secure</h3>
               <p data-aos="fade-in">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex commodo.
+                Peace of mind comes first with Abacus. We protect your funds and
+                personal information with the highest commitment to safety and
+                discretion. When it comes to your money, privacy, and security,
+                there is no room for exceptions.
               </p>
             </div>
             <div className={styles.security__r}>
@@ -387,8 +396,8 @@ const Home: NextPage = () => {
               One app all your <span>accounts</span>
             </h3>
             <p data-aos="fade-in">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Connect and manage all your money—banking, stocks, savings, and
+              crypto—in one place for a better financial experience.
             </p>
             <StoreButtons />
             <div className={styles.accounts__mockup}>
@@ -396,15 +405,14 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <footer className="section">
+        <footer>
           <div className={styles.footer}>
             <div className={styles.footer__wrap}>
               <div className={styles.footer__about}>
                 <img height={100} src="/image/logo.svg" alt="Abacus Logo" />
                 <p>
-                  Abacus is an app that provides an all-in-one solution for
-                  managing and monitoring your financial apps and crypto
-                  accounts.
+                  We provide an all-in-one financial solution for tracking and
+                  managing your money.
                 </p>
                 <Link href="/chat">support@abacus.com</Link>
               </div>

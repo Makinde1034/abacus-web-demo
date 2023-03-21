@@ -378,8 +378,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        <div ref={faqRef} className={styles.faq}></div>
         <FaqGrid />
-        <section ref={faqRef} className={styles.faq}>
+        <section>
           {/* incase the FAQ section needs to be changed */}
           {/* <div className={styles.faq__box}>
             <div className={styles.faq__box__l}>

@@ -165,6 +165,14 @@ export const TwitterReviews = [
     imageUrl:
       "https://pbs.twimg.com/profile_images/1616847254404358144/x3FssdXL_400x400.jpg",
   },
+
+  {
+    name: "Paul",
+    userName: "@adenrelepaul7",
+    tweet: "@trustabacus this app just solved one of my prob 🥹",
+    imageUrl:
+      "https://pbs.twimg.com/profile_images/1603111484556546048/YF1jlHk6_400x400.jpg",
+  },
   {
     name: "Component13",
     userName: "@thechrissteve",
@@ -172,13 +180,6 @@ export const TwitterReviews = [
       "@trustabacus is everything I’ve wanted in a finance product..loved every bit of it",
     imageUrl:
       "https://pbs.twimg.com/profile_images/1567852613760073729/OKiNMHK2_400x400.jpg",
-  },
-  {
-    name: "Paul",
-    userName: "@adenrelepaul7",
-    tweet: "@trustabacus this app just solved one of my prob 🥹",
-    imageUrl:
-      "https://pbs.twimg.com/profile_images/1603111484556546048/YF1jlHk6_400x400.jpg",
   },
   {
     name: "Aleph",

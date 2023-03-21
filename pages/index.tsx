@@ -181,7 +181,7 @@ const Home: NextPage = () => {
             <li onClick={() => scrollToSection(featureRef)}>Features</li>
             <li onClick={() => scrollToSection(securityRef)}>Security</li>
             <li onClick={() => scrollToSection(reviewsRef)}>Reviews</li>
-            <li onClick={() => scrollToSection(faqRef)}>FAQS</li>
+            <li onClick={() => scrollToSection(faqRef)}>FAQs</li>
           </ul>
           <div
             onClick={() => setShowMobileNav(!showMobileNav)}

@@ -574,7 +574,8 @@
 }
 
 .accounts p {
-  color: var(--greyWhite);
+  color: #9f9f9f;
+  line-height: 1.5rem;
   font-weight: lighter;
   width: 30%;
   text-align: center;

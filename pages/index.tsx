@@ -294,20 +294,6 @@ const Home: NextPage = () => {
                 track spending against the plans to manage your money more
                 effectively.
               </p>
-              <div className={styles.wallet__l__grid}>
-                {WalletInfoCopies.map((item, index) => (
-                  <div
-                    data-aos="fade-in"
-                    className={styles.wallet__grid__box}
-                    key={index}
-                  >
-                    <div>
-                      <p>{item.title}</p>
-                      <p>{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
             <div className={styles.wallet__r}>
               <img
@@ -378,9 +364,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <div ref={faqRef} className={styles.faq}></div>
+        <div ref={faqRef}> </div>
         <FaqGrid />
-        <section>
+        <section className={styles.faq}>
           {/* incase the FAQ section needs to be changed */}
           {/* <div className={styles.faq__box}>
             <div className={styles.faq__box__l}>
@@ -415,7 +401,11 @@ const Home: NextPage = () => {
                   We provide an all-in-one financial solution for tracking and
                   managing your money.
                 </p>
-                <Link href="/chat">support@abacus.com</Link>
+                <Link href="/chat">
+                  <p style={{ textDecoration: "underline", color: "white" }}>
+                    support@abacus.com
+                  </p>
+                </Link>
               </div>
               <div className={styles.footer__learn}>
                 <ul>

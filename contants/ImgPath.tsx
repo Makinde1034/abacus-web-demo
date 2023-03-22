@@ -20,7 +20,7 @@ export const ImagesPath = {
   startIcon:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678861483/Star_1_geekvj.svg",
   pocketMockup:
-    "https://res.cloudinary.com/dlinffsds/image/upload/v1678866557/Group_2079_fzzkh2.svg",
+    "https://res.cloudinary.com/getabacus/image/upload/v1679390249/web/Group_2079_1_jkgddk.svg",
   faqImage:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678873935/Frame_325_ulnvij.svg",
   accountsMockup:

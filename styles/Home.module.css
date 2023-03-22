@@ -456,10 +456,6 @@
 }
 
 .reviews__container2 {
-  /* width: 100%;
-  position: relative;
-  column-count: 3;
-  column-gap: 25px; */
   width: 100%;
   padding: 20px;
   display: flex;

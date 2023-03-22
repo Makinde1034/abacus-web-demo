@@ -39,6 +39,12 @@ export const ImagesPath = {
     "https://res.cloudinary.com/getabacus/image/upload/v1678991995/app/web/cyborg-key-3_1_vapdxs.svg",
   closeIcon:
     "https://res.cloudinary.com/getabacus/image/upload/v1679030683/app/web/Vector_hnbrxw.svg",
+  accountMockupL:
+    "https://res.cloudinary.com/getabacus/image/upload/v1679493349/web/account-mockup-1_hbocrr.svg",
+  accountMockupC:
+    "https://res.cloudinary.com/getabacus/image/upload/v1679493348/web/account-mockup-center_kkavpa.svg",
+  accountMockupR:
+    "https://res.cloudinary.com/getabacus/image/upload/v1679493348/web/account-mockup-2_qgu6bn.svg",
 };
 
 export const SocialMediaIcons = {

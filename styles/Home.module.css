@@ -65,6 +65,7 @@
   align-items: center;
   position: relative;
   max-width: 1600px;
+  min-height: 100vh;
 }
 
 .hero h1 {
@@ -264,8 +265,6 @@
   padding: 0px 100px 100px 100px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  align-items: center;
-  justify-content: center;
   background-color: white;
 }
 
@@ -820,6 +819,7 @@
   .discover__grid {
     grid-template-columns: 1fr;
     padding: 0px 20px 100px 20px;
+    row-gap: 50px;
   }
 
   .discover__grid__box {
@@ -829,9 +829,6 @@
   .discover__grid__box p,
   .discover__grid__box h3 {
     text-align: left;
-  }
-
-  .discover__grid__box h3 {
   }
 
   .discover__grid__box img {

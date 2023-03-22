@@ -389,17 +389,17 @@ const Home: NextPage = () => {
             <StoreButtons />
             <div className={styles.accounts__mockup}>
               <img
-                src="https://res.cloudinary.com/getabacus/image/upload/v1679493349/web/account-mockup-1_hbocrr.svg"
+                src={ImagesPath.accountMockupL}
                 alt=""
                 className={styles.accounts__mockup__l}
               />
               <img
-                src="https://res.cloudinary.com/getabacus/image/upload/v1679493348/web/account-mockup-center_kkavpa.svg"
+                src={ImagesPath.accountMockupC}
                 alt=""
                 className={styles.accounts__mockup__c}
               />
               <img
-                src="https://res.cloudinary.com/getabacus/image/upload/v1679493348/web/account-mockup-2_qgu6bn.svg"
+                src={ImagesPath.accountMockupR}
                 alt=""
                 className={styles.accounts__mockup__r}
               />

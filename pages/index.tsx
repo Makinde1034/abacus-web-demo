@@ -388,7 +388,28 @@ const Home: NextPage = () => {
             </p>
             <StoreButtons />
             <div className={styles.accounts__mockup}>
-              <img data-aos="fade-in" src={ImagesPath.accountsMockup} alt="" />
+              <img
+                src="https://res.cloudinary.com/getabacus/image/upload/v1679493349/web/account-mockup-1_hbocrr.svg"
+                alt=""
+                className={styles.accounts__mockup__l}
+              />
+              <img
+                src="https://res.cloudinary.com/getabacus/image/upload/v1679493348/web/account-mockup-center_kkavpa.svg"
+                alt=""
+                className={styles.accounts__mockup__c}
+              />
+              <img
+                src="https://res.cloudinary.com/getabacus/image/upload/v1679493348/web/account-mockup-2_qgu6bn.svg"
+                alt=""
+                className={styles.accounts__mockup__r}
+              />
+              <img
+                data-aos="fade-in"
+                src={ImagesPath.accountsMockup}
+                alt="mock up"
+                className={styles.accounts__mockup__sm}
+              />
+              <div className={styles.accounts__mockup__overlay}></div>
             </div>
           </div>
         </section>

@@ -17,7 +17,7 @@
   padding: 0px 100px 0px 100px;
   height: 60px;
   position: fixed;
-  z-index: 500;
+  z-index: 800;
   width: 100%;
 }
 
@@ -521,7 +521,7 @@
 }
 
 .faq {
-  background-color: var(--dark);
+  background-color: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -573,7 +573,7 @@
   color: #9f9f9f;
   line-height: 1.5rem;
   font-weight: lighter;
-  width: 30%;
+  width: 50%;
   text-align: center;
   margin: 20px 0px;
 }
@@ -586,10 +586,41 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  position: relative;
 }
 
-.accounts__mockup img {
+.accounts__mockup__l {
+  margin-right: -150px;
+  margin-top: 70px;
   width: 75%;
+}
+
+.accounts__mockup__r {
+  margin-left: -150px;
+  margin-top: 70px;
+  z-index: 400;
+  width: 75%;
+}
+
+.accounts__mockup__c {
+  z-index: 600;
+  width: 75%;
+}
+
+.accounts__mockup__overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.7;
+  z-index: 500;
+}
+
+.accounts__mockup__sm {
+  width: 75%;
+  display: none;
+  z-index: 600;
 }
 
 .footer {
@@ -934,7 +965,14 @@
     width: 100%;
   }
 
-  .footer {
+  .accounts__mockup__c,
+  .accounts__mockup__l,
+  .accounts__mockup__r {
+    display: none;
+  }
+
+  .accounts__mockup__sm {
+    display: block;
   }
 
   .footer__wrap {
@@ -1001,6 +1039,12 @@
 
   .pocket__r {
     padding-left: 0px;
+  }
+
+  .accounts__mockup__c,
+  .accounts__mockup__l,
+  .accounts__mockup__r {
+    width: 40%;
   }
 }
 

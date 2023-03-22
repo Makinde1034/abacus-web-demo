@@ -10,7 +10,7 @@ export const ImagesPath = {
   leftRoadMapLine:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678824945/map-line-left_m3wesj.svg",
   carbonIcon:
-    "https://res.cloudinary.com/dlinffsds/image/upload/v1678825127/carbon-icon_hdplxf.svg",
+    "https://res.cloudinary.com/getabacus/image/upload/v1679481807/web/Ellipse_27_jflmqn.svg",
   fcmbIcon:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678878837/fcmb-icon_elrb7l.svg",
   kudaIcon:

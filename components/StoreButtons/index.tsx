@@ -5,13 +5,13 @@ import { ImagesPath } from "../../contants/ImgPath";
 export const StoreButtons = () => {
   return (
     <div className={styles.hero__buttons}>
-      <a target="_blank" rel="noopener" href={AppDetails.appstore}>
+      <a target="_blank" rel="noreferrer" href={AppDetails.appstore}>
         <button>
           <span>App Store</span>
           <img height={30} src={ImagesPath.appStoreLogo} alt="App store icon" />
         </button>
       </a>
-      <a target="_blank" rel="noopener" href={AppDetails.playstore}>
+      <a target="_blank" rel="noreferrer" href={AppDetails.playstore}>
         <button>
           <span>Google Play</span>
           <img

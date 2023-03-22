@@ -24,7 +24,7 @@ export const ImagesPath = {
   faqImage:
     "https://res.cloudinary.com/dlinffsds/image/upload/v1678873935/Frame_325_ulnvij.svg",
   accountsMockup:
-    "https://res.cloudinary.com/getabacus/image/upload/h_900/web/mockup.png",
+    "https://res.cloudinary.com/getabacus/image/upload/v1679478781/web/Group_6534_nw2b25.png",
   dashIcon:
     "https://res.cloudinary.com/getabacus/image/upload/v1678935089/app/web/Expand_Arrow_kcgdqu.svg",
   arrowDownIcon:

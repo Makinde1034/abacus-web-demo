@@ -65,7 +65,7 @@
   align-items: center;
   position: relative;
   max-width: 1600px;
-  min-height: 100vh;
+  min-height: calc(100vh -56px);
 }
 
 .hero h1 {
@@ -140,7 +140,7 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   z-index: 30;
-  margin-top: 60px;
+  margin: 60px 0px -6px 0px;
 }
 
 .hero__mockup img {
@@ -771,6 +771,7 @@
   .hero__mockup {
     display: flex;
     justify-content: center;
+    margin: 60px 0px 0px 0px;
   }
 
   .hero__mockup img {

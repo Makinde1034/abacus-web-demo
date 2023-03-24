@@ -367,17 +367,6 @@ const Home: NextPage = () => {
         <div ref={faqRef}> </div>
         <FaqGrid />
         <section className={styles.faq}>
-          {/* incase the FAQ section needs to be changed */}
-          {/* <div className={styles.faq__box}>
-            <div className={styles.faq__box__l}>
-              <img src={ImagesPath.faqImage} alt="" />
-            </div>
-            <div className={styles.faq__box__r}>
-              <Faq />
-              <FaqGrid />
-            </div>
-          </div> */}
-
           <div className={styles.accounts}>
             <h3 data-aos="fade-in">
               One app all your <span>accounts</span>
@@ -390,23 +379,23 @@ const Home: NextPage = () => {
             <div className={styles.accounts__mockup}>
               <img
                 src={ImagesPath.accountMockupL}
-                alt=""
+                alt="mockup"
                 className={styles.accounts__mockup__l}
               />
               <img
                 src={ImagesPath.accountMockupC}
-                alt=""
+                alt="mockup"
                 className={styles.accounts__mockup__c}
               />
               <img
                 src={ImagesPath.accountMockupR}
-                alt=""
+                alt="mockup"
                 className={styles.accounts__mockup__r}
               />
               <img
                 data-aos="fade-in"
                 src={ImagesPath.accountsMockup}
-                alt="mock up"
+                alt="mockup"
                 className={styles.accounts__mockup__sm}
               />
               <div className={styles.accounts__mockup__overlay}></div>
@@ -441,19 +430,25 @@ const Home: NextPage = () => {
                 <p>Stay in Touch</p>
                 <div>
                   <a href={AppDetails.social.instagram}>
-                    <img src={SocialMediaIcons.instagram} alt="Instagram" />
+                    <img
+                      src={SocialMediaIcons.instagram}
+                      alt="Instagram icon"
+                    />
                   </a>
                   <a href={AppDetails.social.twitter}>
-                    <img src={SocialMediaIcons.twitter} alt="Twitter" />
+                    <img src={SocialMediaIcons.twitter} alt="Twitter icon" />
                   </a>
-                  <a href="">
-                    <img src={SocialMediaIcons.facebook} alt="Facebook" />
+                  <a href={AppDetails.social.facebook}>
+                    <img src={SocialMediaIcons.facebook} alt="Facebook icon" />
                   </a>
                   <a href={AppDetails.social.telegram}>
-                    <img src={SocialMediaIcons.telegram} alt="Telegram" />
+                    <img src={SocialMediaIcons.telegram} alt="Telegram icon" />
                   </a>
                   <a href={AppDetails.social.linkedin}>
-                    <img src={SocialMediaIcons.linkedInIcon} alt="Linkedin" />
+                    <img
+                      src={SocialMediaIcons.linkedInIcon}
+                      alt="Linkedin icon"
+                    />
                   </a>
                 </div>
               </div>

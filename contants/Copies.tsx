@@ -2,23 +2,23 @@ import { AppDetails } from "./App";
 
 export const DiscoverCopies = [
   {
-    title: "Combine all your accounts",
+    title: "Combine accounts",
     descriptio:
-      "Track your net worth and see all your transactions in one place.",
+      "Know your net worth and manage all your accounts and transactions via a single convenient app.",
     imageUrl:
       "https://res.cloudinary.com/dlinffsds/image/upload/v1678863032/Frame_192_xrhrsw.svg",
   },
   {
     title: "Payment made easy",
     descriptio:
-      "Transfer money quickly and smoothly. Easily pay bills and top up airtime and data using your linked accounts and Abacus wallet. Payment on Abacus is fast, reliable, and convenient.",
+      "Easily transfer money, pay bills, and add airtime and data—all from linked accounts and your Abacus wallet.",
     imageUrl:
       "https://res.cloudinary.com/getabacus/image/upload/v1678985548/app/web/didscover-mockup_s2dkkt.svg",
   },
   {
-    title: "Comprehensive analytics",
+    title: "Monitor finances",
     descriptio:
-      "Track your cash flow and spending comprehensively. Link all your financial accounts to gain a full, detailed understanding of how and where your money has been spent.",
+      "Closely track your income and expenses. Get a complete, in-depth view of your financial status.",
     imageUrl:
       "https://res.cloudinary.com/getabacus/image/upload/v1678985636/app/web/discover-mockup-3_ewkj0g.svg",
   },

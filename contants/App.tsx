@@ -7,6 +7,7 @@ export const AppDetails = {
   social: {
     instagram: "https://instagram.com/trustabacus",
     twitter: "https://twitter.com/trustabacus",
+    facebook: "https://www.facebook.com/trustabacus?_rdc=2&_rdr",
     linkedin: "https://linkedin.com/company/trustabacus",
     telegram: "https://t.me/+y2sIIa5B4ZkwMThk",
     telegramSupport: "https://t.me/+56sdmZxWpzllYWI0",
